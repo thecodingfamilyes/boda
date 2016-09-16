@@ -1,9 +1,14 @@
+@import "semantic/semantic";
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+#root {
+	.main-header {
+		height: 400px;
+		background: #000 url("http://lorempixel.com/1920/600/animals") 50% 50% no-repeat;
+		background-size: cover;
 
-// Variables
-@import "variables";
-
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+		.borderless {
+			border: none;
+			box-shadow: none;
+		}
+	}
+}
