@@ -1,11 +1,13 @@
 import React from 'react';
 import {Segment, Container, Grid, Header, Card, Image} from 'stardust';
 import { Link } from 'react-router';
+import Countdown from '../ui/countdown.jsx';
 
 export default class Home extends React.Component {
 	render() {
 		return <div className="ui page home">
 			<Segment vertical className="presentation">
+				<Countdown />
 				<Container>
 					<Grid>
 						<Grid.Row>
@@ -14,32 +16,32 @@ export default class Home extends React.Component {
 									<Header as="h2" content="¡Hola!"/>
 									<p>Mi nombre es Perlita. Soy una <del>perrita</del> perrota muy buena, adorable e inteligente, aunque también soy un tanto envidiosa y egocéntrica y me gusta ser la prota de todo... por eso soy yo la que os cuenta todo esto.</p>
 									<p>Hace ya más de un año que vivo con mi familia, Antonio y Cristina, y mi hermano mayor Lucas. Ellos me adoptaron siendo apenas un bebé pomposo y manejable... ¡Qué horror! ¡Me llevaban en brazos a todas partes! Uff... Pero, en el fondo, son muy molones; me dan comida, me miman, juegan conmigo, me llevan a pasear, me dan más comida, me compran juguetes... y lo mejor de todo... ¡Me dan comida! De vez en cuando me montan en una casa con ruedas y me llevan a sitios extraños que me dan miedo, ¡pero otras veces son sitios chulos y lo pasamos muy bien juntos!</p>
-									<p>Como a cualquier peludo, me gusta mucho jugar en el parque con mis amigos. Mi más mejor amiga es Bujía, aunque también muero por jugar con mis otros mejores amigos: Akiles, Venus, Joker, Thor, Kobu y muchos más. Aquí os dejo algunos <i>selfies</i> que tengo con ellos, para guardar los momentos tan divertidos que pasamos y poder recordarlas cuando seamos viejitos</p>
+									<p>Como a cualquier peludo, me gusta mucho jugar en el parque con mis amigos. Mi más mejor amiga es Bujía, aunque también muero por jugar con mis otros mejores amigos: Akiles, Venus, Joker, Thor, Kobu y muchos más. Aquí os dejo algunos <i>selfies</i> que tengo con ellos, para guardar los momentos tan divertidos que pasamos y poder recordarlas cuando seamos viejitos.</p>
 
 									<Segment vertical className="selfies">
-										<Card.Group itemsPerRow={4} stackable>
+										<Card.Group itemsPerRow={2} stackable>
 											<Card>
-												<Image src="http://semantic-ui.com/images/avatar/large/daniel.jpg" />
+												<Image src="/img/selfies/lucas.jpg" />
 												<Card.Content>
-													<Card.Description>Descripcion de la foto</Card.Description>
+													<Card.Description>Con mi hermano Lucas y Mica</Card.Description>
 												</Card.Content>
 											</Card>
 											<Card>
-												<Image src="http://semantic-ui.com/images/avatar/large/daniel.jpg" />
+												<Image src="/img/selfies/buji.jpg" />
 												<Card.Content>
-													<Card.Description>Descripcion de la foto</Card.Description>
+													<Card.Description>Con mi más mejor amiga Bujía</Card.Description>
 												</Card.Content>
 											</Card>
 											<Card>
-												<Image src="http://semantic-ui.com/images/avatar/large/daniel.jpg" />
+												<Image src="/img/selfies/akiles.jpg" />
 												<Card.Content>
-													<Card.Description>Descripcion de la foto</Card.Description>
+													<Card.Description>Con mi más mejor amigo Akiles</Card.Description>
 												</Card.Content>
 											</Card>
 											<Card>
-												<Image src="http://semantic-ui.com/images/avatar/large/daniel.jpg" />
+												<Image src="/img/selfies/thor.jpg" />
 												<Card.Content>
-													<Card.Description>Descripcion de la foto</Card.Description>
+													<Card.Description>Con mi amigo Thor</Card.Description>
 												</Card.Content>
 											</Card>
 										</Card.Group>
