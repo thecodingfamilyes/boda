@@ -11,6 +11,14 @@ const elixir = require('laravel-elixir');
  |
  */
 
+elixir.config.css.autoprefix = {
+	options: {
+		cascade: true,
+		browsers: ['last 2 versions', '> 1%']
+	}
+};
+
+
 elixir(mix => {
 	mix.sass('app.scss')
 	   .webpack('app.jsx');
