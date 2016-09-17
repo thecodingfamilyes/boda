@@ -7,4 +7,8 @@ const element = document.getElementById('root');
 
 ReactDOM.render(<Router history={browserHistory}>
 	<Route path="/" component={Layout} />
+	<Route path="/boda" component={Layout} />
+	<Route path="/firmas" component={Layout} />
+	<Route path="/faq" component={Layout} />
+	<Route path="/asistentes" component={Layout} />
 </Router>, element);

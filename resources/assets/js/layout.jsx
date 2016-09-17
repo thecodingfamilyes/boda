@@ -1,6 +1,7 @@
 import React from 'react';
 import MainHeader from './ui/mainheader.jsx';
 import Home from './pages/home.jsx';
+import NotFound from './pages/notfound.jsx';
 import {Segment} from 'stardust';
 
 
@@ -10,7 +11,7 @@ export default class Layout extends React.Component {
 			'/': Home
 		};
 
-		let Page = paths[path];
+		let Page = paths[path] || NotFound;
 
 		return <Page />;
 	}
@@ -18,7 +19,7 @@ export default class Layout extends React.Component {
 	render() {		
 
 		return <div className="ui">
-			<MainHeader />
+			<MainHeader activePage={this.props.route.path} />
 			<Segment className="content-wrapper" vertical>
 				{this.getPage(this.props.route.path)}
 			</Segment>			
