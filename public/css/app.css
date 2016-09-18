@@ -28988,7 +28988,7 @@ html.ios body {
 *******************************/
 #root .main-header {
   height: 400px;
-  background: #000 url("http://lorempixel.com/1920/600/animals") 50% 50% no-repeat;
+  background: #000 url("/img/selfies/akiles.jpg") 50% 26% no-repeat;
   background-size: cover; }
   #root .main-header .borderless {
     border: none;
