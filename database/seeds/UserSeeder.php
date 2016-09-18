@@ -12,6 +12,7 @@ class UserSeeder extends Seeder
 	 */
 	public function run()
 	{
+		User::unguard();
 		for ($i=0; $i < 10; $i++) {
 			$user = factory(User::class)->create();
 		}

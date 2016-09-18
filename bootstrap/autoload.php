@@ -32,3 +32,19 @@ $compiledPath = __DIR__.'/cache/compiled.php';
 if (file_exists($compiledPath)) {
     require $compiledPath;
 }
+
+function pr() {
+	$args = func_get_args();
+	if (count($args) > 1) {
+		foreach ($args as $arg) {
+			pr($arg);
+		}
+	}
+
+	echo '<pre>'.print_r($args[0], true).'</pre>';
+}
+
+function prd() {
+	call_user_func_array('pr', func_get_args());
+	die;
+}

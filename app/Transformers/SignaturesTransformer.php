@@ -9,6 +9,8 @@ use League\Fractal\TransformerAbstract;
 class SignaturesTransformer extends TransformerAbstract
 {
 
+	protected $availableIncludes = ['author'];
+
 	public function transform(Signature $signature) {
 		return [
 			'id' => $signature->id,
@@ -16,5 +18,11 @@ class SignaturesTransformer extends TransformerAbstract
 			'user_id' => $signature->id,
 			'created_at' => date('c', strtotime($signature->created_at))
 		];
+	}
+
+	public function includeAuthor(Signature $signature) {
+		$author = $signature->user;
+
+		return $this->item($author, new UsersTransformer);
 	}
 }
