@@ -13,6 +13,7 @@ class SignatureSeeder extends Seeder
 	 */
 	public function run()
 	{
+		User::unguard();
 		$users = User::all();
 
 		for ($i=0; $i < 120; $i++) {

@@ -8,25 +8,19 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiListSignaturesTest extends TestCase
 {
-    use DatabaseMigrations;
+	use DatabaseMigrations;
 
+	public function testApiList()
+	{
+		$user = factory(User::class)->create(['name' => 'user1']);
+		$signature = factory(Signature::class)->make(['body' => 'hola ke ase']);
+		$user->signatures()->save($signature);
+		$signature = factory(Signature::class)->make(['body' => 'hola ke ase 2']);
+		$user->signatures()->save($signature);
 
-    /**
-     * A basic functional test example.
-     *
-     * @return void
-     */
-    public function testApiList()
-    {
-        $user = factory(User::class)->create(['name' => 'user1']);
-        $signature = factory(Signature::class)->make(['body' => 'hola ke ase']);
-        $user->signatures()->save($signature);
-        $signature = factory(Signature::class)->make(['body' => 'hola ke ase 2']);
-        $user->signatures()->save($signature);
-
-        $this->json('GET', '/api/signatures')
-             ->seeJson([
-                    'body' => 'hola ke ase'
-                ]);
-    }
+		$this->json('GET', '/api/signatures')
+			 ->seeJson([
+					'body' => 'hola ke ase'
+				]);
+	}
 }

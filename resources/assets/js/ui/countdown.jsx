@@ -73,6 +73,7 @@ export default class Countdown extends React.Component {
 	}
 
 	componentWillUnmount() {
+		clearInterval(this.interval);
 		this.interval = null;
 	}
 
@@ -84,7 +85,7 @@ export default class Countdown extends React.Component {
 		}, 1000);
 	}
 
-	render() {	
+	render() {
 		return <Segment className="wedding-countdown">{this.state.cdprogress}</Segment>;
 	}
 };
