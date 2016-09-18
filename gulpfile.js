@@ -25,5 +25,5 @@ elixir(mix => {
 
 	mix.phpUnit();
 
-	mix.version(['css/app.css', 'js/app.js']);
+//	mix.version(['css/app.css', 'js/app.js']);
 });

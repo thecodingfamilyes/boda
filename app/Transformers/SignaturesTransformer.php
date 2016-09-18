@@ -13,7 +13,8 @@ class SignaturesTransformer extends TransformerAbstract
 		return [
 			'id' => $signature->id,
 			'body' => $signature->body,
-			'user_id' => $signature->id
+			'user_id' => $signature->id,
+			'created_at' => date('c', strtotime($signature->created_at))
 		];
 	}
 }
