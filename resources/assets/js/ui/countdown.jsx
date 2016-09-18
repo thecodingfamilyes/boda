@@ -1,11 +1,11 @@
 import React from "react";
 import moment from "moment";
-import {Container, Message, Segment} from 'stardust';
+import {Container, Segment} from 'stardust';
 import {Circle} from 'react-progressbar.js';
 
 moment.locale('es');
 
-const startDate = moment('2015-09-16 13:30:00');
+const startDate = moment('2016-09-16 13:30:00');
 const weddingDate = moment('2017-06-17 13:30:00');
 
 const startDateTimestamp = startDate.toDate().getTime();
