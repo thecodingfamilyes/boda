@@ -15,9 +15,13 @@ class SignaturesController extends ApiController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $signatures = Signature::all();
+
+        if (in_array('author', $this->embeds)) {
+            $signatures->load('user');
+        }
 
         return $this->outputCollection($signatures, new SignaturesTransformer);
     }

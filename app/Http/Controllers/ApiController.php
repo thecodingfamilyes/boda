@@ -3,6 +3,7 @@
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\Item;
 use League\Fractal\Manager;
+use Illuminate\Http\Request;
 
 /**
  *
@@ -16,9 +17,16 @@ abstract class ApiController extends Controller {
 	const CODE_FORBIDDEN = 'MSS-FORBIDDEN';
 
 	protected $statusCode = 200;
+	protected $embeds = [];
 
-	function __construct(Manager $fractal) {
+	function __construct(Manager $fractal, Request $request) {
 		$this->Fractal = $fractal;
+
+		// Are we going to try and include embedded data?
+		if (!empty($request->input('embed'))) {
+			$this->Fractal->parseIncludes($request->input('embed'));
+			$this->embeds = explode(',', $request->input('embed'));
+		}
 	}
 
 	public function getStatusCode() {
