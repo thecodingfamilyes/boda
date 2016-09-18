@@ -1,6 +1,7 @@
 import React from 'react';
 import MainHeader from './ui/mainheader.jsx';
 import Home from './pages/home.jsx';
+import Boda from './pages/boda.jsx';
 import NotFound from './pages/notfound.jsx';
 import {Segment} from 'stardust';
 
@@ -8,7 +9,8 @@ import {Segment} from 'stardust';
 export default class Layout extends React.Component {
 	getPage(path) {
 		const paths = {
-			'/': Home
+			'/': Home,
+			'/boda': Boda
 		};
 
 		let Page = paths[path] || NotFound;
