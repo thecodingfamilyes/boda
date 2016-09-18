@@ -29029,4 +29029,88 @@ html.ios body {
           #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .label {
             text-transform: uppercase; }
 
+#root .wedding {
+  padding: 10px 0;
+  /*background: #FFF5F5;*/
+  background: #FFE6E6; }
+  #root .wedding .timeline-grid {
+    padding-top: 30px; }
+    #root .wedding .timeline-grid .row {
+      padding: 0 !important; }
+      #root .wedding .timeline-grid .row .column.with-content {
+        padding-bottom: 40px; }
+      #root .wedding .timeline-grid .row .column.left {
+        padding-right: 0; }
+        #root .wedding .timeline-grid .row .column.left.with-content {
+          padding-right: 70px; }
+        #root .wedding .timeline-grid .row .column.left .event-wrapper:after {
+          top: 50%;
+          right: 0;
+          position: absolute;
+          z-index: 2;
+          content: '';
+          top: 24px;
+          right: 0;
+          background-color: #FFF;
+          width: 14px;
+          height: 14px;
+          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
+        #root .wedding .timeline-grid .row .column.left .event-time {
+          text-align: right;
+          right: -32px; }
+          #root .wedding .timeline-grid .row .column.left .event-time .icon-box .time {
+            padding-right: 15px; }
+      #root .wedding .timeline-grid .row .column.right {
+        padding-left: 0;
+        border-left: 2px solid #FF9D9A; }
+        #root .wedding .timeline-grid .row .column.right.with-content {
+          padding-left: 70px; }
+        #root .wedding .timeline-grid .row .column.right .event-time {
+          left: -29px; }
+          #root .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
+            padding-left: 15px; }
+      #root .wedding .timeline-grid .row .column .event-wrapper {
+        padding: 20px;
+        background: #ffffff;
+        position: relative; }
+        #root .wedding .timeline-grid .row .column .event-wrapper .event-title {
+          color: #FF8A87; }
+      #root .wedding .timeline-grid .row .column .event-time {
+        position: absolute;
+        z-index: 10; }
+        #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral {
+          background-color: #f4645f !important;
+          color: #ffffff; }
+          #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral.bordered {
+            box-shadow: 0em 0em 0em 0.1em white; }
+        #root .wedding .timeline-grid .row .column .event-time .icon-box .time {
+          color: #f4645f; }
+
+#root .perlita-signature {
+  border: none;
+  box-shadow: none;
+  background: none;
+  text-align: right; }
+  #root .perlita-signature .content {
+    width: auto;
+    border-bottom: 1px solid #999;
+    display: inline-block;
+    padding-bottom: 3px; }
+    #root .perlita-signature .content .author {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      vertical-align: bottom;
+      font-size: 12px; }
+    #root .perlita-signature .content .icon {
+      font-size: 60px;
+      -ms-transform: rotate(10deg);
+      /* IE 9 */
+      -webkit-transform: rotate(10deg);
+      /* Chrome, Safari, Opera */
+      transform: rotate(10deg); }
+
 /*# sourceMappingURL=app.css.map */

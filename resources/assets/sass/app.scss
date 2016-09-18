@@ -68,4 +68,36 @@
 			}
 		}
 	}
+
+	@import "pages/boda";
+
+	.perlita-signature {
+		border: none;
+		box-shadow: none;
+		background: none;
+		text-align: right;
+
+		.content {
+			width: auto;
+		    border-bottom: 1px solid #999;
+		    display: inline-block;
+		    padding-bottom: 3px;
+
+		    .author {
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: #999;
+				vertical-align: bottom;
+				font-size: 12px;
+			}
+			
+
+			.icon {
+				font-size: 60px;
+				-ms-transform: rotate(10deg); /* IE 9 */
+			    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+			    transform: rotate(10deg);
+			}
+		}
+	}
 }
