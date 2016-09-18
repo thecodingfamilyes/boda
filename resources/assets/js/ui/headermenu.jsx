@@ -6,9 +6,9 @@ export default class HeaderMenu extends React.Component {
 	render() {
 		let activePath = this.props.activePage;
 
-		return <Menu pointing secondary inverted borderless size="large">
+		return <Menu pointing secondary inverted borderless stackable size="large">
 			<Menu.Header as="h1" content="El diario de Perlita" />
-			<Menu.Menu position="right"> 
+			<Menu.Menu position="right">
 				<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
 				<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
 				<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>

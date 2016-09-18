@@ -11,4 +11,11 @@
 			box-shadow: none;
 		}
 	}
+
+	.page {
+		&.home {
+			background: transparent url('/img/footprints.png') right bottom no-repeat;
+			background-attachment: fixed;
+		}
+	}
 }

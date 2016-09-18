@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+/**
+ * Signature relationship
+ */
+    public function signatures() {
+        return $this->hasMany(Signature::class);
+    }
 }

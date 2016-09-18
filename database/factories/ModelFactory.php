@@ -1,5 +1,8 @@
 <?php
 
+use App\User;
+use App\Signature;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -19,5 +22,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+    ];
+});
+
+/**
+ * Signatures factory
+ */
+$factory->define(App\Signature::class, function (Faker\Generator $faker) {
+
+    return [
+        'body' => $faker->sentence,
     ];
 });

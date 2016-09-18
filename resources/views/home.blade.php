@@ -2,15 +2,15 @@
 <html>
 <head>
 	<title>Mis papis se casan</title>
-	<link rel="stylesheet" type="text/css" href="/css/app.css">
+	<link rel="stylesheet" href="{{ elixir("css/app.css") }}">
 </head>
 <body>
-	<div id="root" class="ui main-ui">	
+	<div id="root" class="ui main-ui">
 	  <div class="ui active inverted dimmer">
 	    <div class="ui huge text loader">Cargando...</div>
-	  </div>		  		
+	  </div>
 	</div>
 
-	<script type="text/javascript" src="/js/app.js"></script>
+	<script src="{{ elixir("js/app.js") }}"></script>
 </body>
 </html>
