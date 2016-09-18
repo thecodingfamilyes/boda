@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import {Container, Message, Segment} from 'stardust';
+import {Container, Segment} from 'stardust';
 import {Circle} from 'react-progressbar.js';
 
 moment.locale('es');
