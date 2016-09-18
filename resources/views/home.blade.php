@@ -3,6 +3,7 @@
 <head>
 	<title>Mis papis se casan</title>
 	<link rel="stylesheet" href="{{ elixir("css/app.css") }}">
+	<link rel="stylesheet" href="{{ elixir("css/animate.min.css") }}">
 </head>
 <body>
 	<div id="root" class="ui main-ui">
