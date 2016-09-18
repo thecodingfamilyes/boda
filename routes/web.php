@@ -11,7 +11,13 @@
 |
 */
 
+require_once 'api.php';
+
 Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/{page}', function () {
     return view('home');
 });
 

@@ -22,4 +22,8 @@ elixir.config.css.autoprefix = {
 elixir(mix => {
 	mix.sass('app.scss')
 	   .webpack('app.jsx');
+
+	mix.phpUnit();
+
+//	mix.version(['css/app.css', 'js/app.js']);
 });

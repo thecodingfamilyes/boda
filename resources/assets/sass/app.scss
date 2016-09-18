@@ -1,17 +1,9 @@
 @import "semantic/semantic";
 
 #root {
-	.segment {
-		border-bottom: 0;
-	}
-
-	.inline {
-		display: inline-block;
-	}
-
 	.main-header {
 		height: 400px;
-		background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
+		background: #000 url("/img/selfies/akiles.jpg") 50% 26% no-repeat;
 		background-size: cover;
 
 		.borderless {
@@ -20,52 +12,10 @@
 		}
 	}
 
-
-	.content-wrapper {
-		padding-top: 0;
-
-		.countdown-wrapper {
-			padding-top: 0;
-
-			.wedding-countdown {
-				text-align: center;
-				border-radius: 0;
-				background: #f4645f;
-
-				.progressbar-container {
-					width: 100px;
-					height: 100px;
-					vertical-align: -190%;
-
-					.progressbar-text {
-						color: #FFB4B2 !important;
-					}
-				}
-
-				.countdown-text {
-					padding-left: 15px;
-
-					.counter-box {
-						text-align: center;
-						color: #FFB4B2;
-						letter-spacing: 2px;
-						font-size: 11px;
-						padding: 0 10px;
-
-						p {
-							margin: 0; 
-						}
-
-						.count {
-							font-size: 26px;
-						}
-
-						.label {
-							text-transform: uppercase;
-						}
-					}
-				}
-			}
+	.page {
+		&.home {
+			background: transparent url('/img/footprints.png') right bottom no-repeat;
+			background-attachment: fixed;
 		}
 	}
 }
