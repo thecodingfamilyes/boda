@@ -28994,4 +28994,8 @@ html.ios body {
     border: none;
     box-shadow: none; }
 
+#root .page.home {
+  background: transparent url("/img/footprints.png") right bottom no-repeat;
+  background-attachment: fixed; }
+
 /*# sourceMappingURL=app.css.map */
