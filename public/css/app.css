@@ -28986,16 +28986,47 @@ html.ios body {
 /*******************************
          Site Overrides
 *******************************/
+#root .segment {
+  border-bottom: 0; }
+
+#root .inline {
+  display: inline-block; }
+
 #root .main-header {
   height: 400px;
-  background: #000 url("/img/selfies/akiles.jpg") 50% 26% no-repeat;
+  background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
   background-size: cover; }
   #root .main-header .borderless {
     border: none;
     box-shadow: none; }
 
-#root .page.home {
-  background: transparent url("/img/footprints.png") right bottom no-repeat;
-  background-attachment: fixed; }
+#root .content-wrapper {
+  padding-top: 0; }
+  #root .content-wrapper .countdown-wrapper {
+    padding-top: 0; }
+    #root .content-wrapper .countdown-wrapper .wedding-countdown {
+      text-align: center;
+      border-radius: 0;
+      background: #f4645f; }
+      #root .content-wrapper .countdown-wrapper .wedding-countdown .progressbar-container {
+        width: 100px;
+        height: 100px;
+        vertical-align: -190%; }
+        #root .content-wrapper .countdown-wrapper .wedding-countdown .progressbar-container .progressbar-text {
+          color: #FFB4B2 !important; }
+      #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text {
+        padding-left: 15px; }
+        #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box {
+          text-align: center;
+          color: #FFB4B2;
+          letter-spacing: 2px;
+          font-size: 11px;
+          padding: 0 10px; }
+          #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box p {
+            margin: 0; }
+          #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .count {
+            font-size: 26px; }
+          #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .label {
+            text-transform: uppercase; }
 
 /*# sourceMappingURL=app.css.map */
