@@ -14,7 +14,7 @@
 
 	<script type="text/javascript">
 		var CURRENT_USER = (function(){
-			return {{ $me }};
+			return {!! $me !!};
 		})();
 	</script>
 	<script src="{{ elixir("js/app.js") }}"></script>

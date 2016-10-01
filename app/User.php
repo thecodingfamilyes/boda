@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'avatar'
     ];
 
     /**
@@ -33,5 +33,12 @@ class User extends Authenticatable
  */
     public function signatures() {
         return $this->hasMany(Signature::class);
+    }
+
+/**
+ * Social account
+ */
+    public function social() {
+        return $this->hasOne(SocialAccount::class);
     }
 }

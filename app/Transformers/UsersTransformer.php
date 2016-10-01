@@ -12,6 +12,7 @@ class UsersTransformer extends TransformerAbstract
 		return [
 			'id' => $user->id,
 			'name' => $user->name,
+			'avatar' => $user->avatar,
 			'created_at' => date('c', strtotime($user->created_at))
 		];
 	}
