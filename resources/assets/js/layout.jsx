@@ -11,7 +11,7 @@ export default class Layout extends React.Component {
 	getPage(path) {
 		const paths = {
 			'/': Home,
-			'/boda': Boda
+			'/boda': Boda,
 			'/firmas': Firmas
 		};
 

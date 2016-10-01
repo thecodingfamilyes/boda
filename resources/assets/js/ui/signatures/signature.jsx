@@ -22,7 +22,6 @@ export default class Signature extends React.Component {
 
 		this.handleAnimation = throttle((visible) => {
 			if (!this.state.animated && visible) {
-				console.log('entro');
 				this.setState({animated: true});
 			}
 		}, 100);

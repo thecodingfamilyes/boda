@@ -12,6 +12,11 @@
 	  </div>
 	</div>
 
+	<script type="text/javascript">
+		var CURRENT_USER = (function(){
+			return {{ $me }};
+		})();
+	</script>
 	<script src="{{ elixir("js/app.js") }}"></script>
 </body>
 </html>

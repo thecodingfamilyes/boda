@@ -14,10 +14,32 @@
 require_once 'api.php';
 
 Route::get('/', function () {
-    return view('home');
+	$me = Auth::user();
+
+	if (!is_null($me)) {
+		$me = $me->toJSON();
+	} else {
+		$me = 'null';
+	}
+
+    return view('home')->with('me', $me);
 });
 
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
+
 Route::get('/{page}', function () {
-    return view('home');
+	$me = Auth::user();
+
+	if (!is_null($me)) {
+		$me = $me->toJSON();
+	} else {
+		$me = 'null';
+	}
+
+    return view('home')->with('me', $me);
 });
+
+
+Auth::routes();
 

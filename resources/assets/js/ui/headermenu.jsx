@@ -1,10 +1,36 @@
 import React from 'react';
-import { Header, Container, Image, Segment, Menu} from 'stardust';
+import { Header, Container, Image, Icon, Segment, Menu, Button} from 'stardust';
 import { Link } from 'react-router';
+import LoginModal from './user/login.jsx';
+
+function onLoginClick() {
+	this.setState({modalActive: true})
+}
 
 export default class HeaderMenu extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			modalActive: false
+		};
+	}
+
+	buildUserInfo() {
+		return <Button inverted basic color="violet" onClick={onLoginClick.bind(this)}>
+			<Icon name="sign in" />
+			Entrar
+		</Button>;
+	}
+
+	onModalHide() {
+		this.setState({modalActive: false});
+	}
+
 	render() {
 		let activePath = this.props.activePage;
+
+		let userInfo = this.buildUserInfo();
 
 		return <Menu pointing secondary inverted borderless stackable size="large">
 			<Menu.Header as="h1" content="El diario de Perlita" />
@@ -14,6 +40,10 @@ export default class HeaderMenu extends React.Component {
 				<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 				<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
 				<Menu.Item name="Asistentes" active={activePath == '/asistentes'}> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
+				<Menu.Item>
+					{userInfo}
+					<LoginModal active={this.state.modalActive} onHide={this.onModalHide.bind(this)}/>
+				</Menu.Item>
 			</Menu.Menu>
 		</Menu>
 	}

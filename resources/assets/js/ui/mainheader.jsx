@@ -6,7 +6,7 @@ export default class MainHeader extends React.Component {
 	render() {
 		return <Segment className="main-header" textAlign="center" vertical inverted>
 			<Container>
-				<HeaderMenu activePage={this.props.activePage}/>
+				<HeaderMenu activePage={this.props.activePage} userInfo={this.props.userInfo}/>
 			</Container>
 		</Segment>;
 	}
