@@ -1,6 +1,12 @@
 @import "semantic/semantic";
+@import "carousel";
+@import "carousel_main";
 
 #root {
+	.mt-10 {
+		margin-top: 10px;
+	}
+
 	.segment {
 		border-bottom: 0;
 	}
@@ -23,6 +29,10 @@
 
 	.content-wrapper {
 		padding-top: 0;
+
+		a {
+			color: #f4645f;
+		}
 
 		.countdown-wrapper {
 			padding-top: 0;
@@ -79,7 +89,7 @@
 
 		.content {
 			width: auto;
-		    border-bottom: 1px solid #999;
+		    border-bottom: 1px solid #f4645f;
 		    display: inline-block;
 		    padding-bottom: 3px;
 
@@ -93,6 +103,7 @@
 			
 
 			.icon {
+				margin: 0;
 				font-size: 60px;
 				-ms-transform: rotate(10deg); /* IE 9 */
 			    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */

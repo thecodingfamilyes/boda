@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Container, Icon} from 'stardust';
+import {Segment, Icon} from 'stardust';
 
 export default () => {	
 	return <Segment className="perlita-signature">
