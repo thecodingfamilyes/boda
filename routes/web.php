@@ -33,11 +33,14 @@ Route::get('/', function () {
 
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
+Auth::routes();
+
+Route::get('/logout', function() {
+	auth()->logout();
+
+	return redirect()->to('/');
+});
 
 Route::get('/{page}', function () {
 	return loadHome();
 });
-
-
-Auth::routes();
-

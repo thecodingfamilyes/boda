@@ -17,7 +17,19 @@ export default class HeaderMenu extends React.Component {
 	}
 
 	buildUserInfo() {
-		return <Button inverted basic color="violet" onClick={onLoginClick.bind(this)}>
+		if (CURRENT_USER) {
+			return <Button primary className="userinfo" animated="vertical" size="small" href="/logout">
+				<Button.Content visible>
+					<Image avatar src={CURRENT_USER.avatar}/>
+					{CURRENT_USER.name}
+				</Button.Content>
+				<Button.Content hidden>
+					<Icon name="sign out"/> Salir
+				</Button.Content>
+			</Button>;
+		}
+
+		return <Button inverted basic primary onClick={onLoginClick.bind(this)}>
 			<Icon name="sign in" />
 			Entrar
 		</Button>;

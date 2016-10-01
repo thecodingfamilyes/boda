@@ -12,6 +12,7 @@
 	  </div>
 	</div>
 
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async defer></script>
 	<script type="text/javascript">
 		var CURRENT_USER = (function(){
 			return {!! $me !!};

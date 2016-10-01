@@ -50,7 +50,7 @@ export default class Signature extends React.Component {
 					{body}
 				</Item.Description>
 				<Item.Extra>
-					<Label color="teal" icon='user' content={author.name} />
+					<Label color="teal" image><img src={author.avatar} /> {author.name}</Label>
 					<Label icon='comment outline' content={moment(data.get('created_at')).fromNow()} />
 				</Item.Extra>
 			</Item.Content>

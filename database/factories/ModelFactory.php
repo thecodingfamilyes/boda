@@ -16,12 +16,13 @@ use App\Signature;
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
-
+    $mail = $faker->safeEmail;
     return [
         'name' => $faker->name,
-        'email' => $faker->safeEmail,
+        'email' => $mail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+        'avatar' => 'https://www.gravatar.com/avatar/'.md5($mail).'?d=monsterid'
     ];
 });
 

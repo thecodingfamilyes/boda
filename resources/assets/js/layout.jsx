@@ -6,7 +6,6 @@ import Firmas from './pages/firmas.jsx';
 import NotFound from './pages/notfound.jsx';
 import {Segment} from 'stardust';
 
-
 export default class Layout extends React.Component {
 	getPage(path) {
 		const paths = {
