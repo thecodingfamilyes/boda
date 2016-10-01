@@ -1,6 +1,5 @@
 import React from 'react';
 import {Segment, Container, Grid, Header, Icon, Image} from 'stardust';
-import PerlitaSignature from '../ui/signature.jsx';
 
 export default class Boda extends React.Component {
 	render() {
@@ -116,7 +115,7 @@ export default class Boda extends React.Component {
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
-					<PerlitaSignature />
+					
 				</Container>
 			</Segment>
 		</div>;	

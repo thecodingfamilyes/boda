@@ -4,6 +4,7 @@ import Home from './pages/home.jsx';
 import Boda from './pages/boda.jsx';
 import NotFound from './pages/notfound.jsx';
 import {Segment} from 'stardust';
+import Footer from './ui/footer.jsx';
 
 
 export default class Layout extends React.Component {
@@ -24,7 +25,8 @@ export default class Layout extends React.Component {
 			<MainHeader activePage={this.props.route.path} />
 			<Segment className="content-wrapper" vertical>
 				{this.getPage(this.props.route.path)}
-			</Segment>			
+			</Segment>
+			<Footer />	
 		</div>;
 	}
 };

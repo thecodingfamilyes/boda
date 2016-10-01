@@ -29372,11 +29372,79 @@ button {
 h5 {
   margin-bottom: 10px; }
 
+.wedding {
+  padding: 10px 0;
+  /*background: #FFF5F5;*/
+  background: #FFE6E6; }
+  .wedding .timeline-grid {
+    padding-top: 30px; }
+    .wedding .timeline-grid .row {
+      padding: 0 !important; }
+      .wedding .timeline-grid .row .column.with-content {
+        padding-bottom: 40px; }
+      .wedding .timeline-grid .row .column.left {
+        padding-right: 0; }
+        .wedding .timeline-grid .row .column.left.with-content {
+          padding-right: 70px; }
+        .wedding .timeline-grid .row .column.left .event-wrapper:after {
+          top: 50%;
+          right: 0;
+          position: absolute;
+          z-index: 2;
+          content: '';
+          top: 24px;
+          right: 0;
+          background-color: #FFF;
+          width: 14px;
+          height: 14px;
+          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
+        .wedding .timeline-grid .row .column.left .event-time {
+          text-align: right;
+          right: -32px; }
+          .wedding .timeline-grid .row .column.left .event-time .icon-box .time {
+            padding-right: 15px; }
+      .wedding .timeline-grid .row .column.right {
+        padding-left: 0;
+        border-left: 2px solid #FF9D9A; }
+        .wedding .timeline-grid .row .column.right.with-content {
+          padding-left: 70px; }
+        .wedding .timeline-grid .row .column.right .event-time {
+          left: -29px; }
+          .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
+            padding-left: 15px; }
+      .wedding .timeline-grid .row .column .event-wrapper {
+        padding: 20px;
+        background: #ffffff;
+        position: relative; }
+        .wedding .timeline-grid .row .column .event-wrapper .event-title {
+          color: #FF8A87; }
+      .wedding .timeline-grid .row .column .event-time {
+        position: absolute;
+        z-index: 10; }
+        .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral {
+          background-color: #f4645f !important;
+          color: #ffffff; }
+          .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral.bordered {
+            box-shadow: 0em 0em 0em 0.1em white; }
+        .wedding .timeline-grid .row .column .event-time .icon-box .time {
+          color: #f4645f; }
+
+#root .container {
+  padding-bottom: 20px; }
+
+#root .borderless {
+  border: none;
+  box-shadow: none; }
+
 #root .mt-10 {
   margin-top: 10px; }
 
 #root .segment {
-  border-bottom: 0; }
+  border-bottom: 0;
+  padding-bottom: 0; }
 
 #root .inline {
   display: inline-block; }
@@ -29385,9 +29453,6 @@ h5 {
   height: 400px;
   background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
   background-size: cover; }
-  #root .main-header .borderless {
-    border: none;
-    box-shadow: none; }
 
 #root .content-wrapper {
   padding-top: 0; }
@@ -29420,66 +29485,6 @@ h5 {
           #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .label {
             text-transform: uppercase; }
 
-#root .wedding {
-  padding: 10px 0;
-  /*background: #FFF5F5;*/
-  background: #FFE6E6; }
-  #root .wedding .timeline-grid {
-    padding-top: 30px; }
-    #root .wedding .timeline-grid .row {
-      padding: 0 !important; }
-      #root .wedding .timeline-grid .row .column.with-content {
-        padding-bottom: 40px; }
-      #root .wedding .timeline-grid .row .column.left {
-        padding-right: 0; }
-        #root .wedding .timeline-grid .row .column.left.with-content {
-          padding-right: 70px; }
-        #root .wedding .timeline-grid .row .column.left .event-wrapper:after {
-          top: 50%;
-          right: 0;
-          position: absolute;
-          z-index: 2;
-          content: '';
-          top: 24px;
-          right: 0;
-          background-color: #FFF;
-          width: 14px;
-          height: 14px;
-          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
-          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
-          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
-          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
-        #root .wedding .timeline-grid .row .column.left .event-time {
-          text-align: right;
-          right: -32px; }
-          #root .wedding .timeline-grid .row .column.left .event-time .icon-box .time {
-            padding-right: 15px; }
-      #root .wedding .timeline-grid .row .column.right {
-        padding-left: 0;
-        border-left: 2px solid #FF9D9A; }
-        #root .wedding .timeline-grid .row .column.right.with-content {
-          padding-left: 70px; }
-        #root .wedding .timeline-grid .row .column.right .event-time {
-          left: -29px; }
-          #root .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
-            padding-left: 15px; }
-      #root .wedding .timeline-grid .row .column .event-wrapper {
-        padding: 20px;
-        background: #ffffff;
-        position: relative; }
-        #root .wedding .timeline-grid .row .column .event-wrapper .event-title {
-          color: #FF8A87; }
-      #root .wedding .timeline-grid .row .column .event-time {
-        position: absolute;
-        z-index: 10; }
-        #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral {
-          background-color: #f4645f !important;
-          color: #ffffff; }
-          #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral.bordered {
-            box-shadow: 0em 0em 0em 0.1em white; }
-        #root .wedding .timeline-grid .row .column .event-time .icon-box .time {
-          color: #f4645f; }
-
 #root .perlita-signature {
   border: none;
   box-shadow: none;
@@ -29504,5 +29509,36 @@ h5 {
       -webkit-transform: rotate(10deg);
       /* Chrome, Safari, Opera */
       transform: rotate(10deg); }
+
+#root .footer {
+  margin: 0;
+  padding: 20px 0;
+  border: none;
+  border-radius: 0;
+  background: #333;
+  border-top: 2px solid #f4645f;
+  overflow: auto; }
+  #root .footer .site-data {
+    float: left; }
+    #root .footer .site-data .site-name, #root .footer .site-data a {
+      color: #999; }
+    #root .footer .site-data .menu {
+      height: 20px; }
+      #root .footer .site-data .menu .item {
+        padding: 0; }
+        #root .footer .site-data .menu .item:not(:first-of-type) a {
+          padding-left: 10px; }
+        #root .footer .site-data .menu .item:not(:last-of-type) a {
+          border-right: 1px solid #999; }
+        #root .footer .site-data .menu .item:hover a {
+          color: #f4645f; }
+        #root .footer .site-data .menu .item a {
+          padding: 0 10px 0 0; }
+  #root .footer .perlita-signature {
+    float: right;
+    margin-top: 0;
+    padding-top: 0; }
+    #root .footer .perlita-signature .icon {
+      color: #f4645f; }
 
 /*# sourceMappingURL=app.css.map */
