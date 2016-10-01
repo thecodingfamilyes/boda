@@ -23,6 +23,10 @@ class SignaturesController extends ApiController
             $signatures->load('user');
         }
 
+        if (in_array('author', $this->embeds)) {
+            $signatures->load('user');
+        }
+
         return $this->outputCollection($signatures, new SignaturesTransformer);
     }
 

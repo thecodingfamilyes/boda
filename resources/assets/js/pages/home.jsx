@@ -2,7 +2,7 @@ import React from 'react';
 import {Segment, Container, Grid, Header, Card, Image} from 'stardust';
 import { Link } from 'react-router';
 import Countdown from '../ui/countdown.jsx';
-import PerlitaSignature from '../ui/signature.jsx';
+import SliderHome from '../ui/sliderhome.jsx';
 
 export default class Home extends React.Component {
 	render() {
@@ -55,9 +55,9 @@ export default class Home extends React.Component {
 
 									<Header as="h3" content="Mis Papis" />
 									<p>Antonio y Cristina, además de ser los mejores papás del mundo mundial, son dos personas encantadoras, humildes, sencillas y muy amigables (o eso dicen todos los que le conocen... ni ellos mismos saben por qué les caen tan bien a todo el mundo). Ellos se conocieron a finales de 2007 en el instituto en el que ambos estudiaban por aquel entonces, cuando Cris tan sólo era una mocosa de 15 años y Antonio un tio hecho y derecho de 21 años. Desde ese momento, casi todo el tiempo libre que tenía Cristina lo dedicaba a "coquetear" con Antonio a través de algo que llamaban Messenger (yo no lo he conocido, por lo que no puedo daros más información al respecto), hasta que un día Cris se le declaró a Antonio, que parecía que era el único de su grupo de amigos que no sabía que mi mami estaba <i>colaíta</i> por él (Ains... papi siempre tan despistado...).</p>
-									<p>Total, que tras muchos consejos de muchos de los más mejores amigos de mi papi, éste se decidió a quedar una tarde con mami con la intención de decirle que esa relación <strong>NO</strong> podía ser, puesto que al <i>caguica</i> de mi papi le daba miedo por la diferencia de edad entre ambos, pero al final no se pudo resistir a la inocencia de mi mami y.. bueno, ya sabéis, que a mí estas cosas me dan vergüenza contarlas... El caso es que después de ese momento, todo ha sido genial. En Octubre de 2014 comenzaron a vivir juntos en San Sebastián de los Reyes, trabajando en la misma empresa, con excelentes compañeros, con excelentes mascotas (tsss) y esforzándose para lograr cumplir sus sueños poco a poco como lo están haciendo. Uno de los más importantes es que el 17 de Junio de 2017 <strong>¡Mis papis <Link to="/boda">se casan</Link>!</strong></p>
+									<p>Total, que tras muchos consejos de muchos de los más mejores amigos de mi papi, éste se decidió a quedar una tarde con mami con la intención de decirle que esa relación <strong>NO</strong> podía ser, puesto que al <i>caguica</i> de mi papi le daba miedo por la diferencia de edad entre ambos, pero al final no se pudo resistir a la inocencia de mi mami y.. bueno, ya sabéis, que a mí estas cosas me dan vergüenza contarlas... El caso es que después de ese momento, todo ha sido genial. En Octubre de 2014 comenzaron a vivir juntos en San Sebastián de los Reyes, trabajando en la misma empresa, con excelentes compañeros, con excelentes mascotas (tsss) y esforzándose para lograr cumplir sus sueños poco a poco como lo están haciendo. Uno de los más importantes es que el 17 de Junio de 2017 <Link to="/boda"><strong>¡Mis papis se casan!</strong></Link></p>
 
-									<PerlitaSignature />
+									<SliderHome />
 									
 								</Container>
 							</Grid.Column>

@@ -1,3 +1,5 @@
+$primary_color: #f4645f;
+
 .wedding {
 	padding: 10px 0;
 	/*background: #FFF5F5;*/
@@ -94,7 +96,7 @@
 					.icon-box {
 						.icon {
 							&.coral {
-								background-color: #f4645f !important;
+								background-color: $primary_color !important;
 								color: #ffffff;
 
 								&.bordered {
@@ -104,7 +106,7 @@
 						}
 
 						.time {
-							color: #f4645f;
+							color: $primary_color;
 						}
 					}
 				}

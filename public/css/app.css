@@ -28986,8 +28986,465 @@ html.ios body {
 /*******************************
          Site Overrides
 *******************************/
-#root .segment {
+/********************************************
+	BREAKPOINT WIDTHS
+********************************************/
+/********************************************
+	FONTS
+********************************************/
+/********************************************
+	COLOURS
+********************************************/
+/*  Vertical gradient
+========================================================================== */
+/*  Horizontal Gradient
+========================================================================== */
+button {
+  outline: 0;
+  border: 0;
+  background: none; }
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer; }
+
+.carousel .control-arrow:hover {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+  margin: 0 5px;
+  display: inline-block;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  content: ''; }
+
+.carousel .control-disabled.control-arrow {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: inherit;
+  display: none; }
+
+.carousel .control-prev.control-arrow {
+  left: 0; }
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #fff; }
+
+.carousel .control-next.control-arrow {
+  right: 0; }
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #fff; }
+
+.carousel {
+  position: relative;
+  width: 100%; }
+
+.carousel * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.carousel img {
+  width: 100%;
+  display: inline-block; }
+
+.carousel .carousel {
+  position: relative; }
+
+.carousel .control-arrow {
+  top: 50%;
+  margin-top: -13px;
+  font-size: 18px; }
+
+.carousel .thumbs-wrapper {
+  margin: 20px;
+  overflow: hidden; }
+
+.carousel .thumbs {
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  list-style: none;
+  white-space: nowrap; }
+
+.carousel .thumb {
+  -webkit-transition: border 0.15s ease-in;
+  -moz-transition: border 0.15s ease-in;
+  -ms-transition: border 0.15s ease-in;
+  -o-transition: border 0.15s ease-in;
+  transition: border 0.15s ease-in;
+  display: inline-block;
+  width: 80px;
+  margin-right: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 3px solid #fff;
+  padding: 2px; }
+
+.carousel .thumb.selected, .carousel .thumb:hover {
+  border: 3px solid #333;
+  padding: 2px; }
+
+.carousel .thumb img {
+  vertical-align: top; }
+
+.carousel.carousel-slider {
+  position: relative;
+  margin: 0;
+  overflow: hidden; }
+
+.carousel.carousel-slider .control-arrow {
+  top: 0;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px; }
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(244, 100, 95, 0.2); }
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 100%; }
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; }
+
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+  flex-direction: column;
+  flex-flow: column; }
+
+.carousel .slider-wrapper.axis-vertical {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; }
+
+.carousel .slider-wrapper.axis-vertical .slider {
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+.carousel .slider {
+  position: relative;
+  list-style: none;
+  width: 100%; }
+
+.carousel .slider.animated {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out; }
+
+.carousel .slide {
+  min-width: 100%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  background: #000; }
+
+.carousel .slide img {
+  width: 100%;
+  vertical-align: top;
+  border: 0; }
+
+.carousel .slide iframe {
+  display: inline-block;
+  width: calc(100% - 80px);
+  margin: 0 40px 40px;
+  border: 0; }
+
+.carousel .slide .legend {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  border-radius: 0px;
+  background: #f4645f;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -ms-transition: opacity 0.35s ease-in-out;
+  -o-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out; }
+
+.carousel .control-dots {
+  position: absolute;
+  bottom: 0;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%; }
+
+@media (min-width: 960px) {
+  .carousel .control-dots {
+    bottom: 0; } }
+
+.carousel .control-dots .dot {
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  background: #fff;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px; }
+
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.carousel .carousel-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  color: #fff; }
+
+.carousel:hover .slide .legend {
+  opacity: 1; }
+
+/********************************************
+	BREAKPOINT WIDTHS
+********************************************/
+/********************************************
+	FONTS
+********************************************/
+/********************************************
+	COLOURS
+********************************************/
+/*  Vertical gradient
+========================================================================== */
+/*  Horizontal Gradient
+========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333; }
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin: 20px 0; }
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5em; }
+
+h2 {
+  border-top: 1px solid #999;
+  padding-top: 40px;
+  margin-top: 40px;
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: 10px; }
+
+code {
+  border-radius: 20px;
+  background: #f5f5f5;
+  padding: 20px;
+  text-indent: 0;
+  color: #333;
+  display: block;
+  margin: auto;
+  overflow: scroll;
+  width: 100%; }
+
+.wrapper {
+  padding: 30px; }
+
+.wrapper .demo-gallery, .wrapper .demo-slider, .wrapper .demo-carousel {
+  margin: 30px -30px; }
+
+.wrapper .demo {
+  display: block;
+  margin: 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333; }
+
+.wrapper .demo:last-child {
   border-bottom: 0; }
+
+.list-items, .summary {
+  margin-left: 50px; }
+
+.list-items li, .summary li {
+  line-height: 2;
+  list-style-type: circle; }
+
+.list-items li ul, .summary li ul {
+  margin-left: 30px; }
+
+button {
+  outline: 0;
+  border: 0;
+  background: none; }
+
+.demo-gallery, .demo-slider, .demo-carousel {
+  margin: 50px auto; }
+
+.demo-gallery .thumb {
+  width: 200px; }
+
+.demo-carousel {
+  width: 100%;
+  margin: 30px auto !important; }
+
+.demo-carousel .thumb {
+  width: 120px; }
+
+.example {
+  margin: 20px 0; }
+
+.parent {
+  background: #333; }
+
+.page-carousel {
+  padding: 40px;
+  border: 1px solid #fff;
+  width: 80%;
+  margin: 40px auto; }
+
+h5 {
+  margin-bottom: 10px; }
+
+.wedding {
+  padding: 10px 0;
+  /*background: #FFF5F5;*/
+  background: #FFE6E6; }
+  .wedding .timeline-grid {
+    padding-top: 30px; }
+    .wedding .timeline-grid .row {
+      padding: 0 !important; }
+      .wedding .timeline-grid .row .column.with-content {
+        padding-bottom: 40px; }
+      .wedding .timeline-grid .row .column.left {
+        padding-right: 0; }
+        .wedding .timeline-grid .row .column.left.with-content {
+          padding-right: 70px; }
+        .wedding .timeline-grid .row .column.left .event-wrapper:after {
+          top: 50%;
+          right: 0;
+          position: absolute;
+          z-index: 2;
+          content: '';
+          top: 24px;
+          right: 0;
+          background-color: #FFF;
+          width: 14px;
+          height: 14px;
+          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
+        .wedding .timeline-grid .row .column.left .event-time {
+          text-align: right;
+          right: -32px; }
+          .wedding .timeline-grid .row .column.left .event-time .icon-box .time {
+            padding-right: 15px; }
+      .wedding .timeline-grid .row .column.right {
+        padding-left: 0;
+        border-left: 2px solid #FF9D9A; }
+        .wedding .timeline-grid .row .column.right.with-content {
+          padding-left: 70px; }
+        .wedding .timeline-grid .row .column.right .event-time {
+          left: -29px; }
+          .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
+            padding-left: 15px; }
+      .wedding .timeline-grid .row .column .event-wrapper {
+        padding: 20px;
+        background: #ffffff;
+        position: relative; }
+        .wedding .timeline-grid .row .column .event-wrapper .event-title {
+          color: #FF8A87; }
+      .wedding .timeline-grid .row .column .event-time {
+        position: absolute;
+        z-index: 10; }
+        .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral {
+          background-color: #f4645f !important;
+          color: #ffffff; }
+          .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral.bordered {
+            box-shadow: 0em 0em 0em 0.1em white; }
+        .wedding .timeline-grid .row .column .event-time .icon-box .time {
+          color: #f4645f; }
+
+#root .container {
+  padding-bottom: 20px; }
+
+#root .borderless {
+  border: none;
+  box-shadow: none; }
+
+#root .mt-10 {
+  margin-top: 10px; }
+
+#root .segment {
+  border-bottom: 0;
+  padding-bottom: 0; }
 
 #root .inline {
   display: inline-block; }
@@ -28996,12 +29453,11 @@ html.ios body {
   height: 400px;
   background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
   background-size: cover; }
-  #root .main-header .borderless {
-    border: none;
-    box-shadow: none; }
 
 #root .content-wrapper {
   padding-top: 0; }
+  #root .content-wrapper a {
+    color: #f4645f; }
   #root .content-wrapper .countdown-wrapper {
     padding-top: 0; }
     #root .content-wrapper .countdown-wrapper .wedding-countdown {
@@ -29029,66 +29485,6 @@ html.ios body {
           #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .label {
             text-transform: uppercase; }
 
-#root .wedding {
-  padding: 10px 0;
-  /*background: #FFF5F5;*/
-  background: #FFE6E6; }
-  #root .wedding .timeline-grid {
-    padding-top: 30px; }
-    #root .wedding .timeline-grid .row {
-      padding: 0 !important; }
-      #root .wedding .timeline-grid .row .column.with-content {
-        padding-bottom: 40px; }
-      #root .wedding .timeline-grid .row .column.left {
-        padding-right: 0; }
-        #root .wedding .timeline-grid .row .column.left.with-content {
-          padding-right: 70px; }
-        #root .wedding .timeline-grid .row .column.left .event-wrapper:after {
-          top: 50%;
-          right: 0;
-          position: absolute;
-          z-index: 2;
-          content: '';
-          top: 24px;
-          right: 0;
-          background-color: #FFF;
-          width: 14px;
-          height: 14px;
-          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
-          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
-          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
-          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
-        #root .wedding .timeline-grid .row .column.left .event-time {
-          text-align: right;
-          right: -32px; }
-          #root .wedding .timeline-grid .row .column.left .event-time .icon-box .time {
-            padding-right: 15px; }
-      #root .wedding .timeline-grid .row .column.right {
-        padding-left: 0;
-        border-left: 2px solid #FF9D9A; }
-        #root .wedding .timeline-grid .row .column.right.with-content {
-          padding-left: 70px; }
-        #root .wedding .timeline-grid .row .column.right .event-time {
-          left: -29px; }
-          #root .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
-            padding-left: 15px; }
-      #root .wedding .timeline-grid .row .column .event-wrapper {
-        padding: 20px;
-        background: #ffffff;
-        position: relative; }
-        #root .wedding .timeline-grid .row .column .event-wrapper .event-title {
-          color: #FF8A87; }
-      #root .wedding .timeline-grid .row .column .event-time {
-        position: absolute;
-        z-index: 10; }
-        #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral {
-          background-color: #f4645f !important;
-          color: #ffffff; }
-          #root .wedding .timeline-grid .row .column .event-time .icon-box .icon.coral.bordered {
-            box-shadow: 0em 0em 0em 0.1em white; }
-        #root .wedding .timeline-grid .row .column .event-time .icon-box .time {
-          color: #f4645f; }
-
 #root .perlita-signature {
   border: none;
   box-shadow: none;
@@ -29096,7 +29492,7 @@ html.ios body {
   text-align: right; }
   #root .perlita-signature .content {
     width: auto;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #f4645f;
     display: inline-block;
     padding-bottom: 3px; }
     #root .perlita-signature .content .author {
@@ -29106,11 +29502,43 @@ html.ios body {
       vertical-align: bottom;
       font-size: 12px; }
     #root .perlita-signature .content .icon {
+      margin: 0;
       font-size: 60px;
       -ms-transform: rotate(10deg);
       /* IE 9 */
       -webkit-transform: rotate(10deg);
       /* Chrome, Safari, Opera */
       transform: rotate(10deg); }
+
+#root .footer {
+  margin: 0;
+  padding: 20px 0;
+  border: none;
+  border-radius: 0;
+  background: #333;
+  border-top: 2px solid #f4645f;
+  overflow: auto; }
+  #root .footer .site-data {
+    float: left; }
+    #root .footer .site-data .site-name, #root .footer .site-data a {
+      color: #999; }
+    #root .footer .site-data .menu {
+      height: 20px; }
+      #root .footer .site-data .menu .item {
+        padding: 0; }
+        #root .footer .site-data .menu .item:not(:first-of-type) a {
+          padding-left: 10px; }
+        #root .footer .site-data .menu .item:not(:last-of-type) a {
+          border-right: 1px solid #999; }
+        #root .footer .site-data .menu .item:hover a {
+          color: #f4645f; }
+        #root .footer .site-data .menu .item a {
+          padding: 0 10px 0 0; }
+  #root .footer .perlita-signature {
+    float: right;
+    margin-top: 0;
+    padding-top: 0; }
+    #root .footer .perlita-signature .icon {
+      color: #f4645f; }
 
 /*# sourceMappingURL=app.css.map */

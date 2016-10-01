@@ -1,6 +1,5 @@
 import React from 'react';
-import {Segment, Container, Grid, Header, Icon} from 'stardust';
-import PerlitaSignature from '../ui/signature.jsx';
+import {Segment, Container, Grid, Header, Icon, Image} from 'stardust';
 
 export default class Boda extends React.Component {
 	render() {
@@ -20,6 +19,7 @@ export default class Boda extends React.Component {
 												<div className="event-content">
 												La ceremonia tendrá lugar en el Complejo "La Tortuga Azul" de Linares. Será una ceremonia civil con un decorado a gusto de los novios que tratarán de conseguir un ambiente agradable y acogedor en el que se sientan cómodos y pasen un día inolvidable. Son muy <i>frikis</i> así que algo <i>chulo</i> se les ocurrirá. <br/>
 												Además, durante la ceremonia, se le dará el gusto al <del>manco</del> amigo Domi (con o sin acompañante) para que les de ese discurso que tanto ansía darles ya que mis papis siempre piensan en los demás y no son capaces de decir que no a esta criaturica <del>del infierno</del>.
+													<Image className="mt-10" src="/img/manquiel.jpg" />
 												</div>
 											</div>
 										</Grid.Column>
@@ -86,7 +86,7 @@ export default class Boda extends React.Component {
 												<Header className="event-title" as="h3" content="Barra libre"/>
 												<div className="event-content">
 												Contaréis con dos horas de barra libre.
-												Mis papis no quieren que esta sea como las típicas de baile <i>chunda-chunda</i> y baile tradicional de los novios, pues mis papis odian bailar, mucho. Ellos quieren que la barra libre sea para vosotros, para que lo déis todo, para que os lo paséis genial y agradeceros con ésto que los acompañéis en ese día tan importante para ellos. Disfrutad mucho, disfrutad a tope pero tranquilos ¡¡que la cosa no termina aquí!!
+												Mis papis no quieren que esta sea como las típicas de baile <i>chunda-chunda</i> y baile tradicional de los novios, pues mis papis odian bailar, mucho, y no lo harán. Ellos quieren que la barra libre sea para vosotros, para que lo déis todo, para que os lo paséis genial y agradeceros con ésto que les acompañéis en ese día tan importante para ellos. Disfrutad mucho, disfrutad a tope pero tranquilos ¡¡que la cosa no termina aquí!!
 												</div>
 											</div>
 										</Grid.Column>
@@ -115,7 +115,7 @@ export default class Boda extends React.Component {
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
-					<PerlitaSignature />
+					
 				</Container>
 			</Segment>
 		</div>;	

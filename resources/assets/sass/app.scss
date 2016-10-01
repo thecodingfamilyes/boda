@@ -1,8 +1,27 @@
 @import "semantic/semantic";
+@import "carousel";
+@import "carousel_main";
+@import "pages/boda";
+
+$primary_color: #f4645f;
 
 #root {
+	.container {
+		padding-bottom: 20px;
+	}
+	
+	.borderless {
+		border: none;
+		box-shadow: none;
+	}
+
+	.mt-10 {
+		margin-top: 10px;
+	}
+
 	.segment {
 		border-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.inline {
@@ -13,16 +32,15 @@
 		height: 400px;
 		background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
 		background-size: cover;
-
-		.borderless {
-			border: none;
-			box-shadow: none;
-		}
 	}
 
 
 	.content-wrapper {
 		padding-top: 0;
+
+		a {
+			color: $primary_color;
+		}
 
 		.countdown-wrapper {
 			padding-top: 0;
@@ -30,7 +48,7 @@
 			.wedding-countdown {
 				text-align: center;
 				border-radius: 0;
-				background: #f4645f;
+				background: $primary_color;
 
 				.progressbar-container {
 					width: 100px;
@@ -69,8 +87,6 @@
 		}
 	}
 
-	@import "pages/boda";
-
 	.perlita-signature {
 		border: none;
 		box-shadow: none;
@@ -79,7 +95,7 @@
 
 		.content {
 			width: auto;
-		    border-bottom: 1px solid #999;
+		    border-bottom: 1px solid $primary_color;
 		    display: inline-block;
 		    padding-bottom: 3px;
 
@@ -93,11 +109,65 @@
 			
 
 			.icon {
+				margin: 0;
 				font-size: 60px;
 				-ms-transform: rotate(10deg); /* IE 9 */
 			    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
 			    transform: rotate(10deg);
 			}
 		}
+	}
+
+	.footer {
+		margin: 0;
+		padding: 20px 0;
+		border: none;
+		border-radius: 0;
+		background: #333;
+		border-top: 2px solid $primary_color;
+		overflow: auto;
+
+		.site-data {
+			float: left;
+
+			.site-name, a {
+				color: #999;
+			}
+
+			.menu {
+				height: 20px;
+
+				.item {
+					padding: 0;
+
+					&:not(:first-of-type) a {
+						padding-left: 10px;
+					}
+
+					&:not(:last-of-type) a {
+						border-right: 1px solid #999;
+					}
+
+					&:hover a {
+						color: $primary_color;
+					}
+
+					a {
+						padding: 0 10px 0 0;
+					}
+				}
+			}
+		}
+
+		.perlita-signature {
+			float: right;
+			margin-top: 0;
+			padding-top: 0;
+
+			.icon {
+				color: $primary_color;
+			}
+		}
+		
 	}
 }
