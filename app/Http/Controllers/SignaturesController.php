@@ -17,7 +17,11 @@ class SignaturesController extends ApiController
      */
     public function index(Request $request)
     {
-        $signatures = Signature::all();
+        $signatures = Signature::orderBy('created_at', 'desc')->get();
+
+        if (in_array('author', $this->embeds)) {
+            $signatures->load('user');
+        }
 
         if (in_array('author', $this->embeds)) {
             $signatures->load('user');

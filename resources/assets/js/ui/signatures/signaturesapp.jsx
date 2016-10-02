@@ -3,6 +3,7 @@ import {Segment, Container, Grid, Header, Card, Image, Loader, Message, Icon} fr
 import fetch from 'fetchival';
 import immutable from 'immutable';
 import SignatureList from './signaturelist.jsx';
+import SignatureForm from './signatureform.jsx';
 
 export default class SignatureApp extends React.Component {
 
@@ -48,6 +49,7 @@ export default class SignatureApp extends React.Component {
 			{loader}
 			<Container>
 				<Header as="h2" content="Libro de firmas" />
+				<SignatureForm />
 				{content}
 			</Container>
 		</Segment>;

@@ -1,4 +1,5 @@
 <?php
+use App\Transformers\UsersTransformer;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,33 @@
 
 require_once 'api.php';
 
+function loadHome() {
+	$me = Auth::user();
+
+	if (!is_null($me)) {
+		$transformer = new UsersTransformer();
+		$me = json_encode($transformer->transform($me), JSON_NUMERIC_CHECK);
+	} else {
+		$me = 'null';
+	}
+
+    return view('home')->with('me', $me);
+}
+
 Route::get('/', function () {
-    return view('home');
+	return loadHome();
+});
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
+Auth::routes();
+
+Route::get('/logout', function() {
+	auth()->logout();
+
+	return redirect()->to('/');
 });
 
 Route::get('/{page}', function () {
-    return view('home');
+	return loadHome();
 });
-
