@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Segment, Menu, Header} from 'stardust';
+import {Container, Segment, Menu, Header, Icon, Image, Grid} from 'stardust';
 import HeaderMenu from './headermenu.jsx';
 import { Link } from 'react-router';
 import PerlitaSignature from '../ui/signature.jsx';
@@ -19,6 +19,19 @@ export default class Footer extends React.Component {
 							<Menu.Item name="Asistentes"> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
 						</Menu.Menu>
 					</Menu>
+					<Grid>
+						<Grid.Row className="social" columns={3}>
+							<Grid.Column>
+								<Link to="https://github.com/mineros/boda"><Icon name='github' size="big" />GitHub</Link>
+							</Grid.Column>
+							<Grid.Column>
+								<Link to="https://twitter.com/cso1992"><Image src="https://pbs.twimg.com/profile_images/2835170634/0ed2479b45d419a66724e09b147ecd95_normal.jpeg" avatar />@cso1992</Link>
+							</Grid.Column>
+							<Grid.Column>
+								<Link to="https://twitter.com/algm85"><Image src="https://pbs.twimg.com/profile_images/500403493534851072/-KVLqSFT_400x400.jpeg" avatar />@algm85</Link>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
 				</div>
 				<PerlitaSignature />
 			</Container>
