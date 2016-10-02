@@ -22,13 +22,13 @@ export default class Footer extends React.Component {
 					<Grid>
 						<Grid.Row className="social" columns={3}>
 							<Grid.Column>
-								<Link to="https://github.com/mineros/boda"><Icon name='github' size="big" />GitHub</Link>
+								<a href="https://github.com/mineros/boda"><Icon name='github' size="big" />GitHub</a>
 							</Grid.Column>
 							<Grid.Column>
-								<Link to="https://twitter.com/cso1992"><Image src="https://pbs.twimg.com/profile_images/2835170634/0ed2479b45d419a66724e09b147ecd95_normal.jpeg" avatar />@cso1992</Link>
+								<a href="https://twitter.com/cso1992"><Image src="https://pbs.twimg.com/profile_images/2835170634/0ed2479b45d419a66724e09b147ecd95_normal.jpeg" avatar />@cso1992</a>
 							</Grid.Column>
 							<Grid.Column>
-								<Link to="https://twitter.com/algm85"><Image src="https://pbs.twimg.com/profile_images/500403493534851072/-KVLqSFT_400x400.jpeg" avatar />@algm85</Link>
+								<a href="https://twitter.com/algm85"><Image src="https://pbs.twimg.com/profile_images/500403493534851072/-KVLqSFT_400x400.jpeg" avatar />@algm85</a>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
