@@ -2,14 +2,16 @@ import React from "react";
 import {Divider, Segment, Button, Icon, Grid, Form, Header} from 'stardust';
 import Register from './registerform.jsx';
 import Recaptcha from 'react-recaptcha';
-
+import Schema from './schema/registerschema.jsx';
+import Winterfell from 'winterfell';
 
 export default class RegisterForm extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			captchaValid: false
+			captchaValid: false,
+			data: null
 		};
 	}
 
@@ -21,37 +23,33 @@ export default class RegisterForm extends React.Component {
 		this.setState({captchaValid: false});
 	}
 
+	onUpdate(data) {
+		console.log(data);
+		this.setState({data: data});
+	}
+
 	render() {
-		return <Form action="/register" method="post">
-			<Form.Field>
-				<label>Nombre</label>
-				<input placeholder="Tu nombre" type="text"/>
-			</Form.Field>
-			<Form.Field>
-				<label>Email</label>
-				<input placeholder="Email" type="email"/>
-			</Form.Field>
-			<Form.Field>
-				<label>Contraseña</label>
-				<input placeholder="Tu contraseña" type="password"/>
-			</Form.Field>
-			<Form.Field>
-				<label>Repetir contraseña</label>
-				<input placeholder="Tu contraseña" type="password"/>
-			</Form.Field>
-			<Recaptcha
-				sitekey="6LclJwgUAAAAACYgdN7w1dwwrUysUNxtbLC5qb4h"
-				render="explicit"
-				onloadCallback={() => {}}
-				verifyCallback={this.onVerifyCaptcha.bind(this)}
-				expiredCallback={this.onCaptchaExpired.bind(this)}
-			/>
+		let schema = Schema;
+		let canSubmit = this.state.captchaValid;
+
+		return <div className="register-form">
+			<Winterfell schema={schema} onUpdate={this.onUpdate.bind(this)} disableSubmit />
+
 			<Segment vertical>
-				<Button type="submit" primary disabled={!this.state.captchaValid}>
+				<Recaptcha
+					sitekey="6LclJwgUAAAAACYgdN7w1dwwrUysUNxtbLC5qb4h"
+					render="explicit"
+					onloadCallback={() => {}}
+					verifyCallback={this.onVerifyCaptcha.bind(this)}
+					expiredCallback={this.onCaptchaExpired.bind(this)}
+				/>
+			</Segment>
+			<Segment vertical>
+				<Button labeled icon primary disabled={!canSubmit} onClick={() => {alert('submit')}}>
 					<Icon name="add user" />
 					Registrarse
 				</Button>
 			</Segment>
-		</Form>;
+		</div>;
 	}
 };
