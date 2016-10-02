@@ -29387,13 +29387,11 @@ h5 {
         .wedding .timeline-grid .row .column.left.with-content {
           padding-right: 70px; }
         .wedding .timeline-grid .row .column.left .event-wrapper:after {
-          top: 50%;
           right: 0;
           position: absolute;
           z-index: 2;
           content: '';
-          top: 24px;
-          right: 0;
+          top: 29px;
           background-color: #FFF;
           width: 14px;
           height: 14px;
@@ -29411,6 +29409,19 @@ h5 {
         border-left: 2px solid #FF9D9A; }
         .wedding .timeline-grid .row .column.right.with-content {
           padding-left: 70px; }
+        .wedding .timeline-grid .row .column.right .event-wrapper:after {
+          left: -14px;
+          position: absolute;
+          z-index: 2;
+          content: '';
+          top: 29px;
+          background-color: #FFF;
+          width: 14px;
+          height: 14px;
+          -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+          -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
         .wedding .timeline-grid .row .column.right .event-time {
           left: -29px; }
           .wedding .timeline-grid .row .column.right .event-time .icon-box .time {
@@ -29432,6 +29443,7 @@ h5 {
         .wedding .timeline-grid .row .column .event-time .icon-box .time {
           color: #f4645f; }
 
+/* La Boda */
 #root .container {
   padding-bottom: 20px; }
 
@@ -29445,6 +29457,10 @@ h5 {
 #root .segment {
   border-bottom: 0;
   padding-bottom: 0; }
+  #root .segment .presentation {
+    padding-top: 20px; }
+  #root .segment .selfies {
+    padding-bottom: 15px; }
 
 #root .inline {
   display: inline-block; }
@@ -29461,6 +29477,7 @@ h5 {
   #root .content-wrapper .countdown-wrapper {
     padding-top: 0; }
     #root .content-wrapper .countdown-wrapper .wedding-countdown {
+      padding-bottom: 10px;
       text-align: center;
       border-radius: 0;
       background: #f4645f; }
@@ -29471,7 +29488,8 @@ h5 {
         #root .content-wrapper .countdown-wrapper .wedding-countdown .progressbar-container .progressbar-text {
           color: #FFB4B2 !important; }
       #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text {
-        padding-left: 15px; }
+        padding-left: 15px;
+        vertical-align: sub; }
         #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box {
           text-align: center;
           color: #FFB4B2;

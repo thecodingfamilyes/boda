@@ -2,6 +2,7 @@
 @import "carousel";
 @import "carousel_main";
 @import "pages/boda";
+@import "responsive";
 
 $primary_color: #f4645f;
 
@@ -22,6 +23,14 @@ $primary_color: #f4645f;
 	.segment {
 		border-bottom: 0;
 		padding-bottom: 0;
+
+		.presentation {
+			padding-top: 20px;
+		}
+
+		.selfies {
+			padding-bottom: 15px;
+		}
 	}
 
 	.inline {
@@ -46,6 +55,7 @@ $primary_color: #f4645f;
 			padding-top: 0;
 
 			.wedding-countdown {
+				padding-bottom: 10px;
 				text-align: center;
 				border-radius: 0;
 				background: $primary_color;
@@ -62,6 +72,7 @@ $primary_color: #f4645f;
 
 				.countdown-text {
 					padding-left: 15px;
+					vertical-align: sub;
 
 					.counter-box {
 						text-align: center;

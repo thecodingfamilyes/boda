@@ -26,13 +26,11 @@ $primary_color: #f4645f;
 
 					.event-wrapper {
 						&:after {
-							top: 50%;
 						    right: 0;
 						    position: absolute;
 						    z-index: 2;
 						    content: '';
-						    top: 24px;
-						    right: 0;
+						    top: 29px;
 						    background-color: #FFF;
 						    width: 14px;
 						    height: 14px;
@@ -62,6 +60,23 @@ $primary_color: #f4645f;
 
 					&.with-content {
 						padding-left: 70px;
+					}
+
+					.event-wrapper {
+						&:after {
+						    left: -14px;
+						    position: absolute;
+						    z-index: 2;
+						    content: '';
+						    top: 29px;
+						    background-color: #FFF;
+						    width: 14px;
+						    height: 14px;
+						    -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+						    transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+						    -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+						    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+						}
 					}
 
 					.event-time {
