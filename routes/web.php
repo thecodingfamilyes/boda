@@ -19,7 +19,8 @@ function loadHome() {
 
 	if (!is_null($me)) {
 		$transformer = new UsersTransformer();
-		$me = json_encode($transformer->transform($me), JSON_NUMERIC_CHECK);
+		$token = $me->api_token;
+		$me = json_encode(array_merge($transformer->transform($me), compact('token')), JSON_NUMERIC_CHECK);
 	} else {
 		$me = 'null';
 	}

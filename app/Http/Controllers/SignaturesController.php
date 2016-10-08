@@ -4,95 +4,60 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\StoreSignature;
+use App\Http\Requests\DeleteSignature;
 use App\Signature;
 use App\Transformers\SignaturesTransformer;
+use Illuminate\Support\Facades\Auth;
 
 class SignaturesController extends ApiController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
-    {
-        $signatures = Signature::orderBy('created_at', 'desc')->get();
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index(Request $request)
+	{
+		$signatures = Signature::orderBy('created_at', 'desc')->get();
 
-        if (in_array('author', $this->embeds)) {
-            $signatures->load('user');
-        }
+		if (in_array('author', $this->embeds)) {
+			$signatures->load('user');
+		}
 
-        if (in_array('author', $this->embeds)) {
-            $signatures->load('user');
-        }
+		if (in_array('author', $this->embeds)) {
+			$signatures->load('user');
+		}
 
-        return $this->outputCollection($signatures, new SignaturesTransformer);
-    }
+		return $this->outputCollection($signatures, new SignaturesTransformer);
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function store(StoreSignature $request)
+	{
+		$data = $request->all();
+		$data['user_id'] = Auth::guard('api')->user()->id;
+		$signature = Signature::create($data);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+		return $this->outputItem($signature, new SignaturesTransformer);
+	}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function destroy(DeleteSignature $request, $id)
+	{
+		$signature = Signature::find($id);
+		Signature::destroy($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+		return $this->outputItem($signature, new SignaturesTransformer);
+	}
 }

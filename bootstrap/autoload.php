@@ -48,3 +48,18 @@ function prd() {
 	call_user_func_array('pr', func_get_args());
 	die;
 }
+
+function is_owner() {
+	$me = Illuminate\Support\Facades\Auth::guard('api')->user();
+	$owner = false;
+
+	if (!empty($me)) {
+		$userid = $me->id;
+
+		if (in_array($me->email, ['piticonejo@gmail.com', 'cristina_080692@hotmail.com'])) {
+			$owner = true;
+		}
+	}
+
+	return $owner;
+}

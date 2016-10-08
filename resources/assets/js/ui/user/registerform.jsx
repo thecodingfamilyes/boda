@@ -24,7 +24,6 @@ export default class RegisterForm extends React.Component {
 	}
 
 	onUpdate(data) {
-		console.log(data);
 		this.setState({data: data});
 	}
 

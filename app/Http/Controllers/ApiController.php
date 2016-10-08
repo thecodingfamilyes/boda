@@ -10,11 +10,11 @@ use Illuminate\Http\Request;
  */
 abstract class ApiController extends Controller {
 
-	const CODE_WRONG_ARGS = 'MSS-WRONGARGS';
-	const CODE_NOT_FOUND = 'MSS-NOTFOUND';
-	const CODE_INTERNAL_ERROR = 'MSS-ERROR';
-	const CODE_UNAUTHORIZED = 'MSS-UNAUTHORIZED';
-	const CODE_FORBIDDEN = 'MSS-FORBIDDEN';
+	const CODE_WRONG_ARGS = 'API-WRONGARGS';
+	const CODE_NOT_FOUND = 'API-NOTFOUND';
+	const CODE_INTERNAL_ERROR = 'API-ERROR';
+	const CODE_UNAUTHORIZED = 'API-UNAUTHORIZED';
+	const CODE_FORBIDDEN = 'API-FORBIDDEN';
 
 	protected $statusCode = 200;
 	protected $embeds = [];

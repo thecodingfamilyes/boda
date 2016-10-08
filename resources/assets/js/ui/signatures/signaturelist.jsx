@@ -5,9 +5,13 @@ import Signature from './signature.jsx';
 
 export default class SignatureList extends React.Component {
 
+	onDelete(id) {
+		this.props.onDelete(id);
+	}
+
 	buildList() {
 		return this.props.signatures.map(signature => {
-			return <Signature key={'signature' + signature.get('id')} data={signature} />;
+			return <Signature key={'signature' + signature.get('id')} data={signature} onDelete={this.onDelete.bind(this)}/>;
 		});
 	}
 

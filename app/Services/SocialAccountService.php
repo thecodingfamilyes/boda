@@ -29,7 +29,8 @@ class SocialAccountService
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
                     'password' => uniqid(),
-                    'avatar' => $providerUser->getAvatar()
+                    'avatar' => $providerUser->getAvatar(),
+                    'api_token' => str_random(60)
                 ]);
             }
 

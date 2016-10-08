@@ -1,5 +1,5 @@
 import React from "react";
-import {Label, Item, Container} from 'stardust';
+import {Label, Item, Container, Button, Icon} from 'stardust';
 import immutable from 'immutable';
 import moment from 'moment';
 import Sensor from 'react-visibility-sensor';
@@ -17,34 +17,24 @@ function nl2p(text) {
 
 export default class Signature extends React.Component {
 
-	constructor(props) {
-		super(props);
-
-		this.handleAnimation = throttle((visible) => {
-			if (!this.state.animated && visible) {
-				this.setState({animated: true});
-			}
-		}, 100);
-
-		this.state = {
-			animated: false
-		};
+	onDelete(e) {
+		this.props.onDelete(this.props.data.get('id'));
 	}
 
 	render() {
 		let data = this.props.data;
 		let body = nl2p(data.get('body'));
 		let author = data.get('author').get('data').toJS();
-		let animationClass = '';
-		let style = {opacity: 0};
+		let animationClass = 'animated fadeIn';
+		let deleteBtn = null;
 
-		if (this.state.animated) {
-			animationClass = 'animated fadeIn';
-			style = null;
+		if (data.get('owner')) {
+			deleteBtn = <Button color='red' size="mini" icon onClick={this.onDelete.bind(this)}>
+				<Icon name="trash outline" /> Eliminar firma
+			</Button>;
 		}
 
-		return <Item className={"signature-item " + animationClass} style={style}>
-			<Sensor onChange={this.handleAnimation.bind(this)} active={!this.state.animated} delay={300} />
+		return <Item className={"signature-item " + animationClass}>
 			<Item.Content>
 				<Item.Description>
 					{body}
@@ -52,6 +42,7 @@ export default class Signature extends React.Component {
 				<Item.Extra>
 					<Label color="teal" image><img src={author.avatar} /> {author.name}</Label>
 					<Label icon='comment outline' content={moment(data.get('created_at')).fromNow()} />
+					{deleteBtn}
 				</Item.Extra>
 			</Item.Content>
 		</Item>;
