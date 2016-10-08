@@ -110,6 +110,27 @@
 			}
 		}
 	}
+
+	#root {
+		.content-wrapper {
+			.countdown-wrapper {
+				.wedding-countdown {
+					.countdown-text {
+						padding-left: 0;
+
+						.counter-box {
+							padding: 0 5px;
+							font-size: 10px;
+							
+							.count {
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
