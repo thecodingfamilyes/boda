@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Signature extends Model
 {
 	//
+
+	public $fillable = ['body', 'user_id'];
+
 /**
 * Get the author that wrote the book.
 */
@@ -14,4 +17,5 @@ class Signature extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
+
 }

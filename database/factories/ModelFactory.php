@@ -22,7 +22,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $mail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'avatar' => 'https://www.gravatar.com/avatar/'.md5($mail).'?d=monsterid'
+        'avatar' => 'https://www.gravatar.com/avatar/'.md5($mail).'?d=monsterid',
+        'api_token' => str_random(60)
     ];
 });
 

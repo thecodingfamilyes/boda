@@ -12,10 +12,12 @@ class SignaturesTransformer extends TransformerAbstract
 	protected $availableIncludes = ['author'];
 
 	public function transform(Signature $signature) {
+
 		return [
 			'id' => $signature->id,
 			'body' => $signature->body,
-			'user_id' => $signature->id,
+			'user_id' => $signature->user_id,
+			'owner' => is_owner(),
 			'created_at' => date('c', strtotime($signature->created_at))
 		];
 	}

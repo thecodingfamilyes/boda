@@ -1,25 +1,52 @@
 import React from "react";
-import {Segment, Button, Message, Icon} from 'stardust';
+import {Segment, Button, Message, Icon, Form} from 'stardust';
 import immutable from 'immutable';
 import Login from '../user/loginform.jsx';
 
 
 export default class SignatureForm extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			value: null,
+			sent: false
+		}
+	}
+
+	onChange(e) {
+		this.setState({value: e.target.value});
+	}
+
+	onSubmit() {
+		if (this.state.value && this.state.value.length >= 5) {
+			this.props.onSend(this.state.value);
+			this.setState({value: null, sent: true});
+		}
+	}
 
 	render() {
 		let me = CURRENT_USER;
-		let formContent = <Segment padded><form className="ui reply form">
-			<div className="textarea">
-				<textarea defaultValue="" placeholder="Escribe aquí tu firma" />
-			</div>
-			<Button fluid color="blue" attached="bottom">Enviar tu firma</Button>
-		</form></Segment>;
+		let canSend = this.state.value && this.state.value.length >= 5;
+		let formContent = <Form>
+				<Form.TextArea placeholder="Escribe aquí tu firma" className="attached-field" onChange={this.onChange.bind(this)}/>
+				<Button fluid color="blue" attached="bottom" onClick={this.onSubmit.bind(this)} disabled={!canSend}>Enviar tu firma</Button>
+			</Form>;
 
 		if (!me) {
-			formContent = <div>
+			formContent = <Segment vertical>
 				<Message attached warning><Icon name="warning" /> Para participar en nuestra web necesitas identificarte.</Message>
 				<Login />
-			</div>;
+			</Segment>;
+		}
+
+		if (this.state.sent) {
+			formContent = <Message icon>
+				<Icon name='thumbs outline up' />
+				<Message.Content>
+					¡Gracias por tu firma!
+				</Message.Content>
+			</Message>;
 		}
 
 		return formContent;
