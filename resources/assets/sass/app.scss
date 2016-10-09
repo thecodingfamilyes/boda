@@ -2,7 +2,6 @@
 @import "carousel";
 @import "carousel_main";
 @import "pages/boda";
-@import "responsive";
 
 $primary_color: #f4645f;
 
@@ -18,6 +17,10 @@ $primary_color: #f4645f;
 
 	.mt-10 {
 		margin-top: 10px;
+	}
+
+	.mt-15 {
+		margin-top: 15px;
 	}
 
 	.segment {
@@ -206,3 +209,5 @@ $primary_color: #f4645f;
 		
 	}
 }
+
+@import "responsive";
