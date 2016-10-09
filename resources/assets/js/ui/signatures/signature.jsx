@@ -36,14 +36,14 @@ export default class Signature extends React.Component {
 
 		return <Item className={"signature-item " + animationClass}>
 			<Item.Content>
-				<Item.Description>
-					{body}
-				</Item.Description>
 				<Item.Extra>
 					<Label color="teal" image><img src={author.avatar} /> {author.name}</Label>
 					<Label icon='comment outline' content={moment(data.get('created_at')).fromNow()} />
 					{deleteBtn}
 				</Item.Extra>
+				<Item.Description>
+					{body}
+				</Item.Description>
 			</Item.Content>
 		</Item>;
 	}

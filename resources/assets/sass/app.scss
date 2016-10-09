@@ -41,6 +41,10 @@ $primary_color: #f4645f;
 					&.brand {
 						font-size: 35px;
 						transform: rotate(10deg);
+
+						&:hover {
+							background: transparent;
+						}
 					}
 				}
 
@@ -69,17 +73,40 @@ $primary_color: #f4645f;
 								box-shadow: none !important;
 							}
 						}
+
+						&.brand {
+							&:hover {
+								background: transparent;
+							}
+						}
 					}
 				}
 			}
 		}
 
 		&.home-menu {
+			background: rgba(0,0,0,0.5);
+
 			.container {
 				>.menu {
 					.item {
+						&:hover {
+							background: rgba(255, 255, 255, 0.15);
+							cursor: pointer;
+						}
+
+						>.button {
+							&.userinfo {
+								margin: -44px 0 0;
+							}
+						}
+
 						&.brand {
 							color: $primary_color;
+
+							&:hover {
+								background: transparent;
+							}
 						}
 					}
 				}
