@@ -21,6 +21,7 @@
 			return {!! $me !!};
 		})();
 	</script>
+	<script src="/js/vendor/device.js"></script>
 	<script src="{{ elixir("js/app.js") }}"></script>
 </body>
 </html>
