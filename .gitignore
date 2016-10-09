@@ -24,3 +24,7 @@ bootstrap/cache/
 .rocketeer/
 
 database/*.sqlite
+
+public/css/app.css
+public/css/app.css.map
+public/js/app.js
