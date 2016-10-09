@@ -35,7 +35,7 @@ export default class SignatureForm extends React.Component {
 
 		if (!me) {
 			formContent = <Segment vertical>
-				<Message attached warning><Icon name="warning" /> Para participar en nuestra web necesitas identificarte.</Message>
+				<Message warning><Icon name="warning" /> Para participar en nuestra web necesitas identificarte.</Message>
 				<Login />
 			</Segment>;
 		}
