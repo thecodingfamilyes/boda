@@ -36,6 +36,13 @@ class User extends Authenticatable
     }
 
 /**
+ * Question relationship
+ */
+    public function questions() {
+        return $this->hasMany(Question::class);
+    }
+
+/**
  * Social account
  */
     public function social() {
