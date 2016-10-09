@@ -9,7 +9,84 @@ $primary_color: #f4645f;
 	.container {
 		padding-bottom: 20px;
 	}
-	
+
+	.main-menu {
+		.container {
+			padding: 0;
+
+			>.menu {
+				display: flex;
+
+				.item {
+					padding: 0;
+
+					> a {
+						&:not(.button) {
+							padding: 13px 16px;
+							display: block;
+						}
+					}
+
+					>.button {
+						&.userinfo {
+							font-size: 0.95em;
+							padding: 5px 10px;
+
+							img {
+								margin-right: 1em;
+							}
+						}
+					}
+
+					&.brand {
+						font-size: 35px;
+						transform: rotate(10deg);
+					}
+				}
+
+			}
+		}
+
+		&.standard {
+			.container {
+				>.menu {
+					.item {
+						> a {
+							&:not(.button) {
+								color: #fff;
+							}
+						}
+
+						&:hover, &.active {
+							background: darken($primary_color, 15%);
+						}
+
+						>.button {
+							&.userinfo {
+								font-size: 0.95em;
+								padding: 5px 10px;
+								border: none;
+								box-shadow: none !important;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.home-menu {
+			.container {
+				>.menu {
+					.item {
+						&.brand {
+							color: $primary_color;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.borderless {
 		border: none;
 		box-shadow: none;
@@ -41,7 +118,7 @@ $primary_color: #f4645f;
 	}
 
 	.main-header {
-		height: 400px;
+		height: 700px;
 		background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
 		background-size: cover;
 	}
@@ -52,6 +129,16 @@ $primary_color: #f4645f;
 
 		a {
 			color: $primary_color;
+		}
+
+		.page {
+			padding-top: 85px;
+		}
+
+		&.home {
+			.page {
+				padding-top: 0;
+			}
 		}
 
 		.countdown-wrapper {
@@ -85,7 +172,7 @@ $primary_color: #f4645f;
 						padding: 0 10px;
 
 						p {
-							margin: 0; 
+							margin: 0;
 						}
 
 						.count {
@@ -120,7 +207,7 @@ $primary_color: #f4645f;
 				vertical-align: bottom;
 				font-size: 12px;
 			}
-			
+
 
 			.icon {
 				margin: 0;
@@ -151,7 +238,7 @@ $primary_color: #f4645f;
 
 			.menu {
 				padding-top: 5px;
-				margin: 0; 
+				margin: 0;
 				display: block;
 				min-height: 5px;
 
@@ -186,7 +273,7 @@ $primary_color: #f4645f;
 				padding: 10px 0 0;
 
 				.social {
-					
+
 
 					a {
 						&:hover {
@@ -206,7 +293,7 @@ $primary_color: #f4645f;
 				color: $primary_color;
 			}
 		}
-		
+
 	}
 }
 

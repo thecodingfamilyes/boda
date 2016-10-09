@@ -18,7 +18,7 @@ export default class HeaderMenu extends React.Component {
 
 	buildUserInfo() {
 		if (CURRENT_USER) {
-			return <Button primary className="userinfo" animated="vertical" size="small" href="/logout">
+			return <Button className="userinfo" basic inverted animated="vertical" size="tiny" href="/logout">
 				<Button.Content visible>
 					<Image avatar src={CURRENT_USER.avatar}/>
 					{CURRENT_USER.name}
@@ -29,7 +29,7 @@ export default class HeaderMenu extends React.Component {
 			</Button>;
 		}
 
-		return <LoginModal open={this.state.modalActive} onHide={this.onModalHide.bind(this)} trigger={<Button inverted basic primary onClick={onLoginClick.bind(this)}>
+		return <LoginModal open={this.state.modalActive} onHide={this.onModalHide.bind(this)} trigger={<Button inverted basic onClick={onLoginClick.bind(this)}>
 			<Icon name="sign in" />
 			Entrar
 		</Button> } />;
@@ -44,18 +44,46 @@ export default class HeaderMenu extends React.Component {
 
 		let userInfo = this.buildUserInfo();
 
-		return <Menu pointing secondary inverted borderless stackable size="large">
-			<Menu.Header as="h1" content="El diario de Perlita" />
-			<Menu.Menu position="right">
-				<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
-				<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
-				<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
-				<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
-				<Menu.Item name="Asistentes" active={activePath == '/asistentes'}> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
-				<Menu.Item>
-					{userInfo}
-				</Menu.Item>
-			</Menu.Menu>
-		</Menu>
+		if (this.props.mode == 'home') {
+			return <Menu compact inverted pointing secondary stackable borderless fixed="top" className="main-menu home-menu">
+				<Container>
+					<Menu.Menu>
+						<Menu.Item className="brand">
+							<Icon name="paw icon" />
+						</Menu.Item>
+						<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
+						<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
+						<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
+						<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
+						<Menu.Item name="Asistentes" active={activePath == '/asistentes'}> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
+					</Menu.Menu>
+					<Menu.Menu position="right">
+						<Menu.Item>
+							{userInfo}
+						</Menu.Item>
+					</Menu.Menu>
+				</Container>
+			</Menu>;
+		}
+
+		return <Menu compact stackable fixed="top" className="main-menu standard">
+			<Container>
+				<Menu.Menu>
+					<Menu.Item className="brand">
+						<Icon name="paw icon" />
+					</Menu.Item>
+					<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
+					<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
+					<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
+					<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
+					<Menu.Item name="Asistentes" active={activePath == '/asistentes'}> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
+				</Menu.Menu>
+				<Menu.Menu position="right">
+					<Menu.Item>
+						{userInfo}
+					</Menu.Item>
+				</Menu.Menu>
+			</Container>
+		</Menu>;
 	}
 };

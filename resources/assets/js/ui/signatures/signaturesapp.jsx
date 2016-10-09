@@ -89,7 +89,7 @@ export default class SignatureApp extends React.Component {
 		let loader = <Loader active={loaderActive}>Cargando...</Loader>;
 		let content = this.buildContent();
 
-		return <Segment className="signatures-page" vertical>
+		return <Segment className="signatures page" vertical>
 			{loader}
 			<Container>
 				<Header as="h2" content="Libro de firmas" />

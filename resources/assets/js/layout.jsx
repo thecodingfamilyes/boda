@@ -6,6 +6,7 @@ import Firmas from './pages/firmas.jsx';
 import NotFound from './pages/notfound.jsx';
 import {Segment} from 'semantic-ui-react';
 import Footer from './ui/footer.jsx';
+import HeaderMenu from './ui/headermenu.jsx';
 
 export default class Layout extends React.Component {
 	getPage(path) {
@@ -21,10 +22,18 @@ export default class Layout extends React.Component {
 	}
 
 	render() {
+		let header = <HeaderMenu activePage={this.props.route.path}/>
+		let isHome = this.props.route.path == '/';
+		let homeclass = '';
+
+		if (isHome) {
+			header = <MainHeader activePage={this.props.route.path} />;
+			homeclass = ' home'
+		}
 
 		return <div className="ui">
-			<MainHeader activePage={this.props.route.path} />
-			<Segment className="content-wrapper" vertical>
+			{header}
+			<Segment className={"content-wrapper" + homeclass} vertical>
 				{this.getPage(this.props.route.path)}
 			</Segment>
 			<Footer />
