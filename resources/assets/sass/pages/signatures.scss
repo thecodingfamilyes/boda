@@ -1,0 +1,44 @@
+$primary_color: #f4645f;
+
+.signatures-list {
+	.divider {
+		.divider-content {
+			.icon {
+				margin-right: 3px;
+			}
+		}
+	}
+
+	.items {
+		.signature-item {
+			.content {
+				.description {
+					background: #FFF6F5;
+					background: rgba(244, 100, 95, 0.06);
+					position: relative;
+					margin-left: 25px;
+
+					&:after {
+						top: -1px;
+						left: 14px;
+					    position: absolute;
+					    z-index: 2;
+					    content: '';
+					    background-color: #FFF6F5;
+					    width: 14px;
+					    height: 14px;
+					    -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+					    transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+					    -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+					    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+					}
+
+					.description-content {
+						padding: 10px 20px;
+					}
+				}
+			}
+		}
+	}
+	
+}

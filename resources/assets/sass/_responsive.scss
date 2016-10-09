@@ -92,3 +92,24 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+	.sm-hidden {
+		display: none !important;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.signatures-list {
+		.items {
+			.signature-item {
+				.content {
+					.description {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+

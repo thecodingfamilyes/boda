@@ -38,11 +38,13 @@ export default class Signature extends React.Component {
 			<Item.Content>
 				<Item.Extra>
 					<Label color="teal" image><img src={author.avatar} /> {author.name}</Label>
-					<Label icon='comment outline' content={moment(data.get('created_at')).fromNow()} />
+					<Label icon="wait" className="sm-hidden" content={moment(data.get('created_at')).fromNow()} />
 					{deleteBtn}
 				</Item.Extra>
 				<Item.Description>
-					{body}
+					<div className="description-content">
+						{body}
+					</div>
 				</Item.Description>
 			</Item.Content>
 		</Item>;
