@@ -8,7 +8,7 @@ class Question extends Model
 {
 	//
 
-	public $fillable = ['body', 'user_id', 'answer'];
+	public $fillable = ['question', 'user_id', 'answer', 'answered_at'];
 
 /**
 * Get the author that wrote the book.

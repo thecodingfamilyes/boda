@@ -21,9 +21,11 @@ export default class Question extends React.Component {
 		let deleteBtn = null;
 
 		if (data.get('owner')) {
-			deleteBtn = <Button color='red' size="mini" icon onClick={this.onDelete.bind(this)}>
-				<Icon name="trash outline" /> Eliminar firma
-			</Button>;
+			deleteBtn = <Comment.Actions>
+	          <Comment.Action>
+	          	<Button basic color="red" size="mini" content='Eliminar' icon='trash outline' onClick={this.onDelete.bind(this)} />
+	          </Comment.Action>
+	        </Comment.Actions>;
 		}
 
 		return <Comment className={"question-item " + animationClass}>
@@ -31,12 +33,13 @@ export default class Question extends React.Component {
 			<Comment.Content>
 				<Comment.Author as='a'>{author.name}</Comment.Author>
 				<Comment.Metadata>
-					<div>{moment(data.get('created_at')).from(moment())}</div>
+					{moment(data.get('created_at')).from(moment())}
 				</Comment.Metadata>
 				<Comment.Text>{question}</Comment.Text>
+				{deleteBtn}
 			</Comment.Content>
 			<Comment.Group>
-				<Answer data={data.toJS()} />
+				<Answer data={data.toJS()} onAnswer={this.props.onAnswer.bind(this)}/>
 			</Comment.Group>
 		</Comment>;
 	}

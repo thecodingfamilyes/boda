@@ -4,6 +4,8 @@ import fetch from 'fetchival';
 import immutable from 'immutable';
 import moment from 'moment';
 import QuestionList from './questionlist.jsx';
+import QuestionForm from './questionform.jsx';
+
 
 export default class QuestionApp extends React.Component {
 
@@ -39,6 +41,29 @@ export default class QuestionApp extends React.Component {
 		}
 	}
 
+	onAnswer(id, answer) {
+		let questions = this.state.questions;
+		let save = null;
+		let newdata = questions.map(q => {
+			if (q.get('id') == id) {
+				q = q.set('answer', answer);
+				q = q.set('answered_at', moment().format());
+
+				save = q;
+			}
+
+			return q;
+		});
+
+		if (save) {
+			this.updateQuestion(id, save.toJS());
+		}
+
+		this.setState({
+			questions: newdata
+		});
+	}
+
 	buildContent() {
 		let content = <Message icon>
 				<Icon name='warning circle' />
@@ -50,7 +75,7 @@ export default class QuestionApp extends React.Component {
 		let questions = this.state.questions;
 
 		if (questions && questions.size) {
-			return <QuestionList questions={questions} onDelete={this.onDelete.bind(this)} />;
+			return <QuestionList questions={questions} onDelete={this.onDelete.bind(this)} onAnswer={this.onAnswer.bind(this)}/>;
 		}
 
 		return content;
@@ -62,18 +87,26 @@ export default class QuestionApp extends React.Component {
 		});
 	}
 
+	updateQuestion(id, data) {
+		this.questions(id).put(data).then((resp) => {
+			console.log('update', resp);
+		});
+	}
+
 	onAdd(text) {
 		const userinfo = CURRENT_USER;
 		let questions = this.state.questions;
 		let newdata = {
 			id: moment().unix(),
-			body: text,
+			question: text,
+			answer: null,
+			answered_at: null,
 			user_id: userinfo.id,
 			created_at: moment().format(),
 			author: {data: userinfo}
 		};
 		let savedata = {
-			body: text
+			question: text
 		};
 
 		questions = questions.unshift(immutable.fromJS(newdata));
@@ -90,17 +123,14 @@ export default class QuestionApp extends React.Component {
 
 		return <Segment className="questions page" vertical>
 			<Container>
-				<Grid columns={2}>
+				<Grid columns={1}>
 					<Grid.Row>
-						<Grid.Column width={6}>
-							static
-						</Grid.Column>
-						<Grid.Column width={10}>
-							<Segment padded>
+						<Grid.Column width={16}>
+							<Segment vertical>
 								{loader}
 								<Container>
 									<Header as="h2" content="Pregúntanos" />
-									Form
+									<QuestionForm onSend={this.onAdd.bind(this)}/>
 									{content}
 								</Container>
 							</Segment>

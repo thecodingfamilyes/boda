@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Header, Item, Statistic, Comment} from 'semantic-ui-react';
+import {Segment, Header, Item, Statistic, Comment, Divider, Icon} from 'semantic-ui-react';
 import immutable from 'immutable';
 import Question from './question.jsx';
 
@@ -11,21 +11,13 @@ export default class QuestionList extends React.Component {
 
 	buildList() {
 		return this.props.questions.map(question => {
-			return <Question key={'question' + question.get('id')} data={question} onDelete={this.onDelete.bind(this)}/>;
+			return <Question key={'question' + question.get('id')} data={question} onDelete={this.onDelete.bind(this)} onAnswer={this.props.onAnswer.bind(this)}/>;
 		});
 	}
 
 	render() {
 		return <Segment vertical>
-			<Header as="h3" content="Preguntas" />
-			<Statistic size="small">
-				<Statistic.Value>
-					{this.props.questions.size}
-				</Statistic.Value>
-				<Statistic.Label>
-					Preguntas
-				</Statistic.Label>
-			</Statistic>
+			<Divider horizontal><Icon name='comments outline' />Vuestras Preguntas</Divider>
 			<Comment.Group>
 				{this.buildList()}
 			</Comment.Group>

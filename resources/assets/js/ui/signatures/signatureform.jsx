@@ -30,7 +30,7 @@ export default class SignatureForm extends React.Component {
 		let canSend = this.state.value && this.state.value.length >= 5;
 		let formContent = <Form>
 				<Form.TextArea placeholder="Escribe aquí tu firma" className="attached-field" onChange={this.onChange.bind(this)}/>
-				<Button fluid color="blue" attached="bottom" onClick={this.onSubmit.bind(this)} disabled={!canSend}>Enviar tu firma</Button>
+				<Button fluid primary attached="bottom" onClick={this.onSubmit.bind(this)} disabled={!canSend}>Enviar tu firma</Button>
 			</Form>;
 
 		if (!me) {
