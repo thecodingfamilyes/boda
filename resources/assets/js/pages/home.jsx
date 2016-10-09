@@ -19,7 +19,7 @@ export default class Home extends React.Component {
 									<Header as="h2" content="¡Hola!"/>
 									<p>Mi nombre es Perlita. Soy una <del>perrita</del> perrota muy sociable, buena, adorable e inteligente, aunque también soy un tanto envidiosa y egocéntrica y me gusta ser la prota de todo... por eso soy yo la que os cuenta todo esto.</p>
 									<p>Hace ya más de un año que vivo con mi familia, Antonio y Cristina, y mi hermano mayor Lucas. Ellos me adoptaron siendo apenas un bebé pomposo y manejable... ¡Qué horror! ¡Me llevaban en brazos a todas partes! Uff... Pero, en el fondo, son muy molones; me dan comida, me miman, juegan conmigo, me llevan a pasear, me dan más comida, me compran juguetes... y lo mejor de todo... ¡Me dan comida! De vez en cuando me montan en una casa con ruedas y me llevan a sitios extraños que me dan miedo, ¡pero otras veces son sitios chulos y lo pasamos muy bien juntos!</p>
-									<p>Como a cualquier peludo, me gusta mucho jugar en el parque con mis amigos. Mi más mejor amiga es Bujía, aunque también muero por jugar con mis otros mejores amigos: Akiles, Venus, Joker, Thor, Kobu y muchos más. Aquí os dejo algunos <i>selfies</i> que tengo con ellos, para guardar los momentos tan divertidos que pasamos y poder recordarlas cuando seamos viejitos.</p>
+									<p>Como a cualquier peludo, me gusta mucho jugar en el parque con mis amigos. Mi más mejor amiga es Bujía, aunque también muero por jugar con mis otros mejores amigos: Akiles, Venus, Joker, Thor, Kobu y muchos más (Ah, y mis papis!!). Aquí os dejo algunos <i>selfies</i> que tengo con ellos, para guardar los momentos tan divertidos que pasamos y poder recordarlas cuando seamos viejitos.</p>
 
 									<Segment vertical className="selfies">
 										<Card.Group itemsPerRow={2} stackable>
@@ -45,6 +45,18 @@ export default class Home extends React.Component {
 												<Image src="/img/selfies/thor.jpg" />
 												<Card.Content>
 													<Card.Description>Con mi amigo Thor</Card.Description>
+												</Card.Content>
+											</Card>
+											<Card>
+												<Image src="/img/selfies/con_papi.jpg" />
+												<Card.Content>
+													<Card.Description>Con mi super papi</Card.Description>
+												</Card.Content>
+											</Card>
+											<Card>
+												<Image src="/img/selfies/con_mami.jpg" />
+												<Card.Content>
+													<Card.Description>Con mi super mami</Card.Description>
 												</Card.Content>
 											</Card>
 										</Card.Group>
