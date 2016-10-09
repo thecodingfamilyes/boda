@@ -9,6 +9,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class ApiListSignaturesTest extends TestCase
 {
 	use DatabaseMigrations;
+	use DatabaseTransactions;
+
 
 	public function testApiList()
 	{

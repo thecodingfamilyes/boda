@@ -14,18 +14,20 @@ use App\Transformers\UsersTransformer;
 
 require_once 'api.php';
 
-function loadHome() {
-	$me = Auth::user();
+if (!function_exists('loadHome')) {
+	function loadHome() {
+		$me = Auth::user();
 
-	if (!is_null($me)) {
-		$transformer = new UsersTransformer();
-		$token = $me->api_token;
-		$me = json_encode(array_merge($transformer->transform($me), compact('token')), JSON_NUMERIC_CHECK);
-	} else {
-		$me = 'null';
+		if (!is_null($me)) {
+			$transformer = new UsersTransformer();
+			$token = $me->api_token;
+			$me = json_encode(array_merge($transformer->transform($me), compact('token')), JSON_NUMERIC_CHECK);
+		} else {
+			$me = 'null';
+		}
+
+		return view('home')->with('me', $me);
 	}
-
-    return view('home')->with('me', $me);
 }
 
 Route::get('/', function () {

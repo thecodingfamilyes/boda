@@ -36,3 +36,13 @@ $factory->define(App\Signature::class, function (Faker\Generator $faker) {
         'body' => implode("\n", $faker->paragraphs(rand(1, 10)))
     ];
 });
+
+/**
+ * Questions factory
+ */
+$factory->define(App\Question::class, function (Faker\Generator $faker) {
+
+    return [
+        'question' => $faker->sentence
+    ];
+});

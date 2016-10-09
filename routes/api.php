@@ -15,4 +15,5 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'api'], function () {
 	Route::resource('signatures', 'SignaturesController');
+	Route::resource('questions', 'QuestionsController');
 });

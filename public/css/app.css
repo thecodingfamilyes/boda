@@ -21671,18 +21671,6 @@ h5 {
     #root .main-menu.home-menu .container > .menu .item.brand:hover {
       background: transparent; }
 
-#root .main-menu.mobile-menu > .menu .item.brand {
-  padding: 10px;
-  font-size: 35px;
-  transform: rotate(10deg); }
-  #root .main-menu.mobile-menu > .menu .item.brand:hover {
-    background: transparent; }
-
-#root .main-menu.mobile-menu > .menu .item.dropdown-menu {
-  padding-left: 0; }
-  #root .main-menu.mobile-menu > .menu .item.dropdown-menu .menu {
-    margin-top: 5px; }
-
 #root .borderless {
   border: none;
   box-shadow: none; }
@@ -21700,8 +21688,6 @@ h5 {
     padding-top: 20px; }
   #root .segment .selfies {
     padding-bottom: 15px; }
-    #root .segment .selfies .cards .card .content {
-      padding: 0.5em 1em; }
 
 #root .inline {
   display: inline-block; }
@@ -21717,21 +21703,6 @@ h5 {
     color: #f4645f; }
   #root .content-wrapper .page {
     padding-top: 85px; }
-    #root .content-wrapper .page.notfound .container {
-      padding: 40px 0 80px;
-      text-align: center; }
-      #root .content-wrapper .page.notfound .container img {
-        display: inline-block;
-        max-width: 30%; }
-      #root .content-wrapper .page.notfound .container .notfound-msg {
-        display: inline-block;
-        font-size: 50px;
-        line-height: 54px;
-        padding-left: 50px;
-        text-transform: uppercase;
-        max-width: 50%;
-        text-align: left;
-        vertical-align: middle; }
   #root .content-wrapper.home .page {
     padding-top: 0; }
   #root .content-wrapper .countdown-wrapper {
@@ -21832,11 +21803,6 @@ h5 {
       color: #f4645f; }
 
 /* La Boda */
-@media (min-width: 676px) and (max-width: 991px) {
-  .wedding .timeline-grid .row .column.with-image img {
-    max-width: 400px;
-    margin: 15px auto 0; } }
-
 @media only screen and (max-width: 991px) {
   .ui.stackable.grid:not(.vertically) > .row {
     margin-left: 35px;
@@ -21890,21 +21856,6 @@ h5 {
       padding: 0 5px;
       font-size: 10px; }
       #root .content-wrapper .countdown-wrapper .wedding-countdown .countdown-text .counter-box .count {
-        font-size: 20px; }
-  #root .content-wrapper .page.notfound .container img {
-    max-width: 100%; }
-  #root .content-wrapper .page.notfound .container .notfound-msg {
-    max-width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    padding-left: 0;
-    font-size: 34px;
-    line-height: 38px; } }
-
-@media only screen and (max-width: 500px) {
-  #root .footer .site-data .menu .item:not(:first-of-type) a {
-    padding: 0; }
-  #root .footer .site-data .menu .item:not(:last-of-type) a {
-    border: none; } }
+        font-size: 20px; } }
 
 /*# sourceMappingURL=app.css.map */
