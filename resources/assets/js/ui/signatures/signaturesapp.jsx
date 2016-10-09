@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Container, Grid, Header, Card, Image, Loader, Message, Icon} from 'stardust';
+import {Segment, Container, Grid, Header, Card, Image, Loader, Message, Icon} from 'semantic-ui-react';
 import fetch from 'fetchival';
 import immutable from 'immutable';
 import moment from 'moment';

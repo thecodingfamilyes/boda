@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Header, Item, Statistic} from 'stardust';
+import {Segment, Header, Item, Statistic} from 'semantic-ui-react';
 import immutable from 'immutable';
 import Signature from './signature.jsx';
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {Label, Item, Container, Button, Icon} from 'stardust';
+import {Label, Item, Container, Button, Icon} from 'semantic-ui-react';
 import immutable from 'immutable';
 import moment from 'moment';
 import Sensor from 'react-visibility-sensor';

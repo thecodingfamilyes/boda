@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment, Container, Grid, Header, Card, Image} from 'stardust';
+import {Segment, Container, Grid, Header, Card, Image} from 'semantic-ui-react';
 import { Link } from 'react-router';
 import Countdown from '../ui/countdown.jsx';
 import SliderHome from '../ui/sliderhome.jsx';
@@ -58,7 +58,7 @@ export default class Home extends React.Component {
 									<p>Total, que tras muchos consejos de muchos de los más mejores amigos de mi papi, éste se decidió a quedar una tarde con mami con la intención de decirle que esa relación <strong>NO</strong> podía ser, puesto que al <i>caguica</i> de mi papi le daba miedo por la diferencia de edad entre ambos, pero al final no se pudo resistir a la inocencia de mi mami y.. bueno, ya sabéis, que a mí estas cosas me dan vergüenza contarlas... El caso es que después de ese momento, todo ha sido genial. En Octubre de 2014 comenzaron a vivir juntos en San Sebastián de los Reyes, trabajando en la misma empresa, con excelentes compañeros, con excelentes mascotas (tsss) y esforzándose para lograr cumplir sus sueños poco a poco como lo están haciendo. Uno de los más importantes es que el 17 de Junio de 2017 <Link to="/boda"><strong>¡Mis papis se casan!</strong></Link></p>
 
 									<SliderHome />
-									
+
 								</Container>
 							</Grid.Column>
 						</Grid.Row>
