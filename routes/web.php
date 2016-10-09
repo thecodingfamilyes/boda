@@ -34,6 +34,10 @@ Route::get('/', function () {
 
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
+
+Route::get('/google/redirect', 'GoogleSocialAuthController@redirect');
+Route::get('/google/callback', 'GoogleSocialAuthController@callback');
+
 Auth::routes();
 
 Route::get('/logout', function() {

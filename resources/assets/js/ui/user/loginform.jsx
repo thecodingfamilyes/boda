@@ -9,38 +9,11 @@ export default class Login extends React.Component {
 				<Icon name="facebook" />
 				Entrar con Facebook
 			</Button>
-			<Divider horizontal>Ó</Divider>
-			<Segment vertical>
-				<Grid columns={2}>
-					<Grid.Column>
-						<Header><Icon name="sign in" />Entrar</Header>
-						<Form action="/login" method="post">
-							<Form.Field>
-								<label>Email</label>
-								<input placeholder="Email" type="email"/>
-							</Form.Field>
-							<Form.Field>
-								<label>Contraseña</label>
-								<input placeholder="Tu contraseña" type="password"/>
-							</Form.Field>
-							<Segment vertical>
-								<Grid columns={2}>
-									<Button.Group>
-										<Button type="submit" primary labeled icon>
-											<Icon name="sign in" />
-											Entrar
-										</Button>
-									</Button.Group>
-								</Grid>
-							</Segment>
-						</Form>
-					</Grid.Column>
-					<Grid.Column>
-						<Header><Icon name="add user" /> Registro</Header>
-						<Register />
-					</Grid.Column>
-				</Grid>
-			</Segment>
+			<Button color="google plus" href="/google/redirect">
+				<Icon name="google" />
+				Entrar con Google
+			</Button>
+
 		</Segment>;
 	}
 };
