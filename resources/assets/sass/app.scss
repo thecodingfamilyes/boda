@@ -2,6 +2,7 @@
 @import "carousel";
 @import "carousel_main";
 @import "pages/boda";
+@import "pages/signatures";
 
 $primary_color: #f4645f;
 
@@ -154,7 +155,7 @@ $primary_color: #f4645f;
 	.content-wrapper {
 		padding-top: 0;
 
-		a {
+		a:not(.button) {
 			color: $primary_color;
 		}
 

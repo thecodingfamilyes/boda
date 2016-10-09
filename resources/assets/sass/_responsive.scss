@@ -92,3 +92,45 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+	.sm-hidden {
+		display: none !important;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.signatures-list {
+		.items {
+			.signature-item {
+				.content {
+					.description {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#root {
+		.content-wrapper {
+			.countdown-wrapper {
+				.wedding-countdown {
+					.countdown-text {
+						padding-left: 0;
+
+						.counter-box {
+							padding: 0 5px;
+							font-size: 10px;
+							
+							.count {
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
