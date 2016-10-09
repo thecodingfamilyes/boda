@@ -113,6 +113,30 @@ $primary_color: #f4645f;
 				}
 			}
 		}
+
+		&.mobile-menu {
+			>.menu {
+				.item {
+					&.brand {
+						padding: 10px;
+						font-size: 35px;
+						transform: rotate(10deg);
+
+						&:hover {
+							background: transparent;
+						}
+					}
+
+					&.dropdown-menu {
+						padding-left: 0;
+
+						.menu {
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.borderless {
@@ -138,6 +162,14 @@ $primary_color: #f4645f;
 
 		.selfies {
 			padding-bottom: 15px;
+
+			.cards {
+				.card {
+					.content {
+						padding: 0.5em 1em;
+					}
+				}
+			}
 		}
 	}
 
@@ -161,6 +193,29 @@ $primary_color: #f4645f;
 
 		.page {
 			padding-top: 85px;
+
+			&.notfound {
+				.container {
+					padding: 40px 0 80px;
+					text-align: center;
+
+					img {
+						display: inline-block;
+						max-width: 30%;
+					}
+
+					.notfound-msg {
+						display: inline-block;
+						font-size: 50px;
+						line-height: 54px;
+						padding-left: 50px;
+						text-transform: uppercase;
+						max-width: 50%;
+						text-align: left;
+						vertical-align: middle;
+					}
+				}
+			}
 		}
 
 		&.home {
@@ -224,11 +279,11 @@ $primary_color: #f4645f;
 
 		.content {
 			width: auto;
-		    border-bottom: 1px solid $primary_color;
-		    display: inline-block;
-		    padding-bottom: 3px;
+			border-bottom: 1px solid $primary_color;
+			display: inline-block;
+			padding-bottom: 3px;
 
-		    .author {
+			.author {
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				color: #999;
@@ -241,8 +296,8 @@ $primary_color: #f4645f;
 				margin: 0;
 				font-size: 60px;
 				-ms-transform: rotate(10deg); /* IE 9 */
-			    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
-			    transform: rotate(10deg);
+				-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+				transform: rotate(10deg);
 			}
 		}
 	}

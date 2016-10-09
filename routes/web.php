@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/logout', function() {
 	auth()->logout();
 
-	return redirect()->to('/');
+	return Redirect::back();
 });
 
 Route::get('/{page}', function () {

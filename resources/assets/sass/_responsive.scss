@@ -4,8 +4,11 @@
 		.timeline-grid {
 			.row {
 				.column {
-					.with-image {
-						
+					&.with-image {
+						img {
+							max-width: 400px;
+							margin: 15px auto 0;
+						}
 					}
 				}
 			}
@@ -124,6 +127,54 @@
 							
 							.count {
 								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+
+
+			.page {
+				&.notfound {
+					.container {
+
+						img {
+							max-width: 100%;
+						}
+
+						.notfound-msg {
+							max-width: 100%;
+							text-align: center;
+							padding-top: 20px;
+							padding-left: 0;
+							font-size: 34px;
+							line-height: 38px;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#root {
+		.footer {
+			.site-data {
+				.menu {
+					.item {
+
+						&:not(:first-of-type) {
+							a {
+								padding: 0;
+							}
+						}
+
+						&:not(:last-of-type) {
+							a {
+								border: none;
 							}
 						}
 					}

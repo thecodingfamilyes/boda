@@ -26,7 +26,7 @@ export default class Home extends React.Component {
 											<Card>
 												<Image src="/img/selfies/lucas.jpg" />
 												<Card.Content>
-													<Card.Description>Con mi hermano Lucas y Mica</Card.Description>
+													<Card.Description>Con mis hermanos Lucas y Mica</Card.Description>
 												</Card.Content>
 											</Card>
 											<Card>

@@ -65,7 +65,7 @@ export default class HeaderMenu extends React.Component {
 					<Menu.Item className="brand">
 						<Icon name="paw icon" />
 					</Menu.Item>
-					<Menu.Item>
+					<Menu.Item className="dropdown-menu">
 						<Dropdown trigger={<span><Icon name="content" /> {sections[activePath]}</span>}>
 							<Dropdown.Menu>
 								<Dropdown.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Dropdown.Item>
