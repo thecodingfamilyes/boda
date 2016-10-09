@@ -21599,15 +21599,18 @@ h5 {
     .wedding .timeline-grid .row .column .right .with-content {
       padding-left: 70px; } }
 
-.signatures-list .divider .divider-content .icon {
+.page.signatures .login-form .button {
+  margin-bottom: 10px; }
+
+.page.signatures .signatures-list .divider .divider-content .icon {
   margin-right: 3px; }
 
-.signatures-list .items .signature-item .content .description {
+.page.signatures .signatures-list .items .signature-item .content .description {
   background: #FFF6F5;
   background: rgba(244, 100, 95, 0.06);
   position: relative;
   margin-left: 25px; }
-  .signatures-list .items .signature-item .content .description:after {
+  .page.signatures .signatures-list .items .signature-item .content .description:after {
     top: -1px;
     left: 14px;
     position: absolute;
@@ -21620,7 +21623,7 @@ h5 {
     transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
     -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
     transform: translateY(-50%) translateX(50%) rotate(-45deg); }
-  .signatures-list .items .signature-item .content .description .description-content {
+  .page.signatures .signatures-list .items .signature-item .content .description .description-content {
     padding: 10px 20px; }
 
 .modals .modal.login-modal .content .button {
@@ -21827,8 +21830,10 @@ h5 {
           padding: 0 10px 0 0; }
     #root .footer .site-data .grid {
       padding: 10px 0 0; }
-      #root .footer .site-data .grid .social a:hover {
-        color: #f4645f; }
+      #root .footer .site-data .grid .social .column {
+        padding-right: 0; }
+        #root .footer .site-data .grid .social .column a:hover {
+          color: #f4645f; }
   #root .footer .perlita-signature {
     float: right;
     margin-top: 0;
@@ -21911,6 +21916,12 @@ h5 {
   #root .footer .site-data .menu .item:not(:first-of-type) a {
     padding: 0; }
   #root .footer .site-data .menu .item:not(:last-of-type) a {
-    border: none; } }
+    border: none; }
+  #root .footer .site-data .grid .social .column a {
+    text-align: center;
+    display: block; }
+    #root .footer .site-data .grid .social .column a .icon {
+      display: block;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=app.css.map */

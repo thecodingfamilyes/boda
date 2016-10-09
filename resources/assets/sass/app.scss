@@ -369,13 +369,16 @@ $primary_color: #f4645f;
 				padding: 10px 0 0;
 
 				.social {
-
-
-					a {
-						&:hover {
-							color: $primary_color;
+					.column {
+						padding-right: 0;
+						
+						a {
+							&:hover {
+								color: $primary_color;
+							}
 						}
 					}
+					
 				}
 			}
 		}
