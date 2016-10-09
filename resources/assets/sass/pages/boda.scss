@@ -55,12 +55,7 @@ $primary_color: #f4645f;
 				}
 
 				&.right {
-					padding-left: 0;
 					border-left: 2px solid #FF9D9A;
-
-					&.with-content {
-						padding-left: 70px;
-					}
 
 					.event-wrapper {
 						&:after {
@@ -95,12 +90,15 @@ $primary_color: #f4645f;
 					background: #ffffff;
 					position: relative;
 
-					.event-title {
+					.event-title, .ctime {
 						color: #FF8A87;
+						display: inline-block;
+						margin-top: 0;
 					}
 
-					.event-content {
-
+					.ctime {
+						display: none;
+						visibility: hidden;
 					}
 				}
 
@@ -129,5 +127,23 @@ $primary_color: #f4645f;
 			}
 		}
 
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.wedding {
+		.timeline-grid {
+			.row {
+				.column {
+					.right {
+						padding: 0;
+
+						.with-content {
+							padding-left: 70px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
