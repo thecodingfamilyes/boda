@@ -57,6 +57,10 @@ $primary_color: #f4645f;
 				&.right {
 					border-left: 2px solid #FF9D9A;
 
+					&.with-content {
+						padding-left: 70px;
+					}
+
 					.event-wrapper {
 						&:after {
 						    left: -14px;

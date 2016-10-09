@@ -4,7 +4,7 @@ import Login from './loginform.jsx'
 
 export default class LoginModal extends React.Component {
 	render() {
-		return <Modal dimmer="blurring" open={this.props.open} trigger={this.props.trigger}>
+		return <Modal className="login-modal" dimmer="blurring" open={this.props.open} trigger={this.props.trigger}>
 			<Header><Icon name='sign in' /> Entrar</Header>
 			<Modal.Content>
 				<Segment vertical>

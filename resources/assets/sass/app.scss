@@ -6,6 +6,19 @@
 
 $primary_color: #f4645f;
 
+.modals {
+	.modal {
+		&.login-modal {
+			.content {
+				.button {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+
 #root {
 	.container {
 		padding-bottom: 20px;
