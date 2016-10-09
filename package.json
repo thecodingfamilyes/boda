@@ -37,7 +37,6 @@
     "react-router": "^2.8.1",
     "react-visibility-sensor": "^3.4.0",
     "reflux": "^0.4.1",
-    "semantic-ui": "^2.2.4",
     "semantic-ui-react": "^0.54.5",
     "winterfell": "^1.0.8"
   }
