@@ -1,5 +1,5 @@
 import React from "react";
-import {Segment, Button, Message, Icon, Form} from 'stardust';
+import {Segment, Button, Message, Icon, Form} from 'semantic-ui-react';
 import immutable from 'immutable';
 import Login from '../user/loginform.jsx';
 

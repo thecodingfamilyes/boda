@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container, Image, Icon, Segment, Menu, Button} from 'stardust';
+import { Header, Container, Image, Icon, Segment, Menu, Button} from 'semantic-ui-react';
 import { Link } from 'react-router';
 import LoginModal from './user/login.jsx';
 
@@ -29,10 +29,10 @@ export default class HeaderMenu extends React.Component {
 			</Button>;
 		}
 
-		return <Button inverted basic primary onClick={onLoginClick.bind(this)}>
+		return <LoginModal open={this.state.modalActive} onHide={this.onModalHide.bind(this)} trigger={<Button inverted basic primary onClick={onLoginClick.bind(this)}>
 			<Icon name="sign in" />
 			Entrar
-		</Button>;
+		</Button> } />;
 	}
 
 	onModalHide() {
@@ -54,7 +54,6 @@ export default class HeaderMenu extends React.Component {
 				<Menu.Item name="Asistentes" active={activePath == '/asistentes'}> <Link to="/asistentes">Asistentes</Link> </Menu.Item>
 				<Menu.Item>
 					{userInfo}
-					<LoginModal active={this.state.modalActive} onHide={this.onModalHide.bind(this)}/>
 				</Menu.Item>
 			</Menu.Menu>
 		</Menu>

@@ -1,10 +1,10 @@
 import React from "react";
-import {Modal, Button, Icon, Header, Segment} from 'stardust';
+import {Modal, Button, Icon, Header, Segment} from 'semantic-ui-react';
 import Login from './loginform.jsx'
 
 export default class LoginModal extends React.Component {
 	render() {
-		return <Modal dimmer="blurring" active={this.props.active}>
+		return <Modal dimmer="blurring" open={this.props.open} trigger={this.props.trigger}>
 			<Header><Icon name='sign in' /> Entrar</Header>
 			<Modal.Content>
 				<Segment vertical>

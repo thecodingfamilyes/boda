@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container, Image, Segment} from 'stardust';
+import { Header, Container, Image, Segment} from 'semantic-ui-react';
 import HeaderMenu from './headermenu.jsx';
 
 export default class MainHeader extends React.Component {

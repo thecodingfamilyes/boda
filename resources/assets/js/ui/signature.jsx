@@ -1,7 +1,7 @@
 import React from "react";
-import {Segment, Icon} from 'stardust';
+import {Segment, Icon} from 'semantic-ui-react';
 
-export default () => {	
+export default () => {
 	return <Segment className="perlita-signature">
 		<p className="content"><span className="author">Perlita</span><Icon name='paw' size="big" /></p>
 	</Segment>;

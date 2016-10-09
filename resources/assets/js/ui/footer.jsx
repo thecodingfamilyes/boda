@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Segment, Menu, Header, Icon, Image, Grid} from 'stardust';
+import {Container, Segment, Menu, Header, Icon, Image, Grid} from 'semantic-ui-react';
 import HeaderMenu from './headermenu.jsx';
 import { Link } from 'react-router';
 import PerlitaSignature from '../ui/signature.jsx';

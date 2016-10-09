@@ -1,5 +1,5 @@
 import React from "react";
-import {Divider, Segment, Button, Icon, Grid, Form, Header} from 'stardust';
+import {Divider, Segment, Button, Icon, Grid, Form, Header} from 'semantic-ui-react';
 import Register from './registerform.jsx';
 
 export default class Login extends React.Component {
