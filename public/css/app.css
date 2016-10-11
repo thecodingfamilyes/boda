@@ -21672,7 +21672,7 @@ h5 {
   #root .main-menu.home-menu .container > .menu .item:hover {
     background: rgba(255, 255, 255, 0.15);
     cursor: pointer; }
-  #root .main-menu.home-menu .container > .menu .item > .button.userinfo {
+  #root .main-menu.home-menu .container > .menu .item > .button.userinfo, #root .main-menu.home-menu .container > .menu .item > .button.login-btn {
     margin: -44px 0 0; }
   #root .main-menu.home-menu .container > .menu .item.brand {
     color: #f4645f; }
@@ -21715,9 +21715,12 @@ h5 {
   display: inline-block; }
 
 #root .main-header {
-  height: 700px;
-  background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
-  background-size: cover; }
+  padding: 0;
+  background: #f4645f;
+  box-shadow: none; }
+  #root .main-header .header-bg {
+    width: 100%;
+    max-height: 700px; }
 
 #root .content-wrapper {
   padding-top: 0; }
@@ -21745,7 +21748,7 @@ h5 {
   #root .content-wrapper .countdown-wrapper {
     padding-top: 0; }
     #root .content-wrapper .countdown-wrapper .wedding-countdown {
-      padding-bottom: 10px;
+      padding-bottom: 20px;
       text-align: center;
       border-radius: 0;
       background: #f4645f; }
@@ -21889,6 +21892,12 @@ h5 {
         transform: translateY(-50%) translateX(50%) rotate(-45deg); } }
 
 @media only screen and (max-width: 768px) {
+  .main-header {
+    height: 56px; }
+  .header-bg {
+    display: none;
+    margin: 0;
+    padding: 0; }
   .sm-hidden {
     display: none !important;
     visibility: hidden;

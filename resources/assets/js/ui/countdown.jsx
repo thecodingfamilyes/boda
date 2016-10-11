@@ -86,6 +86,6 @@ export default class Countdown extends React.Component {
 	}
 
 	render() {
-		return <Segment className="wedding-countdown">{this.state.cdprogress}</Segment>;
+		return <Segment className="wedding-countdown borderless">{this.state.cdprogress}</Segment>;
 	}
 };

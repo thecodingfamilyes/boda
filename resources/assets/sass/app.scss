@@ -110,7 +110,7 @@ $primary_color: #f4645f;
 						}
 
 						>.button {
-							&.userinfo {
+							&.userinfo, &.login-btn {
 								margin: -44px 0 0;
 							}
 						}
@@ -191,9 +191,16 @@ $primary_color: #f4645f;
 	}
 
 	.main-header {
-		height: 700px;
-		background: #000 url("/img/selfies/portada_akiles.jpg") 50% 26% no-repeat;
-		background-size: cover;
+		//height: 700px;
+		padding: 0;
+		background: $primary_color;
+		box-shadow: none;
+		//background-size: auto 100%;
+
+		.header-bg {
+			width: 100%;
+			max-height: 700px;
+		}
 	}
 
 
@@ -241,7 +248,7 @@ $primary_color: #f4645f;
 			padding-top: 0;
 
 			.wedding-countdown {
-				padding-bottom: 10px;
+				padding-bottom: 20px;
 				text-align: center;
 				border-radius: 0;
 				background: $primary_color;
@@ -371,14 +378,14 @@ $primary_color: #f4645f;
 				.social {
 					.column {
 						padding-right: 0;
-						
+
 						a {
 							&:hover {
 								color: $primary_color;
 							}
 						}
 					}
-					
+
 				}
 			}
 		}

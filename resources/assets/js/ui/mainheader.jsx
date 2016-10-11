@@ -24,9 +24,10 @@ export default class MainHeader extends React.Component {
 		}
 
 		return <Segment className="main-header" textAlign="center" vertical inverted>
-			<Segment vertical textAlign="center">
-				<HeaderMenu mode={headermode} activePage={this.props.activePage} userInfo={this.props.userInfo}/>
-			</Segment>
+
+			<HeaderMenu mode={headermode} activePage={this.props.activePage} userInfo={this.props.userInfo}/>
+
+			<img src="/img/fondo_header.jpg" className="header-bg" />
 			<VisibilitySensor minTopValue={250} onChange={this.onChange.bind(this)} delay={250} />
 		</Segment>;
 	}

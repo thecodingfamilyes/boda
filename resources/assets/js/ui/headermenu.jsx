@@ -38,7 +38,7 @@ export default class HeaderMenu extends React.Component {
 			</Button>;
 		}
 
-		return <LoginModal open={this.state.modalActive} onHide={this.onModalHide.bind(this)} trigger={<Button inverted basic onClick={onLoginClick.bind(this)}>
+		return <LoginModal open={this.state.modalActive} onHide={this.onModalHide.bind(this)} trigger={<Button className="login-btn" inverted basic onClick={onLoginClick.bind(this)}>
 			<Icon name="sign in" />
 			Entrar
 		</Button> } />;

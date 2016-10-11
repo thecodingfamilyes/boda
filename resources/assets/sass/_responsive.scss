@@ -25,7 +25,7 @@
 	.ui.grid > .row > [class*="eight wide"].column {
 		width: 100% !important;
 	}
-	
+
 	.wedding {
 		.timeline-grid {
 			.row {
@@ -97,6 +97,17 @@
 
 
 @media only screen and (max-width: 768px) {
+
+	.main-header {
+		height: 56px;
+	}
+
+	.header-bg {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
 	.sm-hidden {
 		display: none !important;
 		visibility: hidden;
@@ -125,7 +136,7 @@
 						.counter-box {
 							padding: 0 5px;
 							font-size: 10px;
-							
+
 							.count {
 								font-size: 20px;
 							}
@@ -194,7 +205,7 @@
 								}
 							}
 						}
-						
+
 					}
 				}
 
