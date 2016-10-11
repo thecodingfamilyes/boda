@@ -31,6 +31,7 @@
 	<meta property="og:locale" content="es_ES">
 	<meta property="og:audio" content="">
 	<meta property="og:video" content="">
+	<meta name="google-site-verification" content="{{ env('GOOGLE_TAG') }}" />
 
 	<link rel="stylesheet" href="{{ elixir("css/app.css") }}">
 	<link rel="stylesheet" href="{{ elixir("css/animate.min.css") }}">
