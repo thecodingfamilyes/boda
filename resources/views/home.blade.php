@@ -45,11 +45,16 @@
 	</div>
 
 	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async defer></script>
+
 	<script type="text/javascript">
 		var CURRENT_USER = (function(){
 			return {!! $me !!};
 		})();
 	</script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+
 	<script src="/js/lib/device.js"></script>
 	<script src="{{ elixir("js/app.js") }}"></script>
 </body>

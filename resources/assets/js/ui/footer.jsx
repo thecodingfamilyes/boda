@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
 		return <Segment className="footer">
 			<Container>
 				<div className="site-data">
-					<Header as="h4" className="site-name" content="&copy; 2016 - 2017 El diario de Perlita"/>
+					<Header as="h4" className="site-name" content="&copy; 2016 - 2017 Mis Papis se casan"/>
 					<Menu pointing secondary inverted borderless stackable size="large">
 						<Menu.Menu>
 							<Menu.Item name="Home"><Link to="/">Home</Link></Menu.Item>
