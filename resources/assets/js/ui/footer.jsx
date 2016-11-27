@@ -16,6 +16,7 @@ export default class Footer extends React.Component {
 							<Menu.Item name="La boda"><Link to="/boda">La Boda</Link></Menu.Item>
 							<Menu.Item name="Libro de firmas"> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 							<Menu.Item name="Pregúntanos"> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
+							<Menu.Item name="Asistencia"> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
 						</Menu.Menu>
 					</Menu>
 					<Grid>
