@@ -37,7 +37,7 @@ export default class Layout extends React.Component {
 
 		return <div className="ui">
 			{header}
-			<Segment className={"content-wrapper" + homeclass} vertical>
+			<Segment className={'content-wrapper' + homeclass} vertical>
 				{this.getPage(this.props.route.path)}
 			</Segment>
 			<Footer />

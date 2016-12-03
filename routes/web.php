@@ -1,6 +1,7 @@
 <?php
 use App\Transformers\UsersTransformer;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,16 @@ Route::get('/logout', function() {
 	auth()->logout();
 
 	return Redirect::back();
+});
+
+Route::get('/export', function() {
+	if (!is_owner('web')) {
+		App::abort(403);
+	}
+
+	$Export = new App\Services\ExportService();
+
+	return $Export->output();
 });
 
 Route::get('/{page}', function () {

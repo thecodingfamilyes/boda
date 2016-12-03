@@ -26,6 +26,7 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "cookies-js": "^1.2.3",
     "fetchival": "^0.3.2",
     "immutable": "^3.8.1",
     "jquery": "^3.1.1",

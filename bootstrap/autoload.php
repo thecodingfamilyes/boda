@@ -49,8 +49,8 @@ function prd() {
 	die;
 }
 
-function is_owner() {
-	$me = Illuminate\Support\Facades\Auth::guard('api')->user();
+function is_owner($guard = 'api') {
+	$me = Illuminate\Support\Facades\Auth::guard($guard)->user();
 	$owner = false;
 
 	if (!empty($me)) {
