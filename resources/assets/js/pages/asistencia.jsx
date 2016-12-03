@@ -3,7 +3,7 @@ import {Segment, Message, Container, Form, Button, Header, Grid} from 'semantic-
 import List from '../ui/asistencia/list.jsx';
 import {clone, isEqual, values} from 'underscore';
 import validate from 'validate.js';
-
+import fetch from 'fetchival';
 
 const constraints = {
 	name: {
@@ -39,6 +39,8 @@ export default class Asistencia extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.form = fetch('/api/guests');
+
 		this.state = {
 			data: {
 				name: '',
@@ -51,7 +53,8 @@ export default class Asistencia extends React.Component {
 			},
 			hasError: false,
 			validationErrors: [],
-			errorField: null
+			errorField: null,
+			sent: false
 		};
 	}
 
@@ -81,16 +84,20 @@ export default class Asistencia extends React.Component {
 		e.preventDefault();
 
 		let errors = validate(this.state.data, constraints) || {};
-		console.log('submit', errors);
 
 		if (values(errors).length) {
-			console.log(values(errors).reduce((a,b) => a.concat(b)));
 			this.setState({
 				hasError: true,
 				validationErrors: values(errors).reduce((a,b) => a.concat(b)).map(msg => msg.split(' ').slice(1).join(' '))
 			});
 		} else {
-			alert('submit!');
+			this.form.post(this.state.data).then(() => {
+				this.setState({
+					sent: true
+				});
+			}).fail(() => {
+				alert('El formulario no se ha podido enviar debido a un error');
+			});
 		}
 	}
 
