@@ -63,7 +63,7 @@ export default class HeaderMenu extends React.Component {
 			return <Menu size="small" fixed="top" className="main-menu mobile-menu">
 				<Menu.Menu>
 					<Menu.Item className="brand">
-						<Icon name="paw icon" />
+						<Icon name="paw" />
 					</Menu.Item>
 					<Menu.Item className="dropdown-menu">
 						<Dropdown trigger={<span><Icon name="content" /> {sections[activePath]}</span>}>
@@ -72,7 +72,7 @@ export default class HeaderMenu extends React.Component {
 								<Dropdown.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Dropdown.Item>
 								<Dropdown.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Dropdown.Item>
 								<Dropdown.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Dropdown.Item>
-
+								<Dropdown.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
 					</Menu.Item>
@@ -89,13 +89,13 @@ export default class HeaderMenu extends React.Component {
 					<Container>
 						<Menu.Menu>
 							<Menu.Item className="brand">
-								<Icon name="paw icon" />
+								<Icon name="paw" />
 							</Menu.Item>
 							<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
 							<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
 							<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 							<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
-
+							<Menu.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
 						</Menu.Menu>
 						<Menu.Menu position="right">
 							<Menu.Item>
@@ -110,13 +110,13 @@ export default class HeaderMenu extends React.Component {
 				<Container>
 					<Menu.Menu>
 						<Menu.Item className="brand">
-							<Icon name="paw icon" />
+							<Icon name="paw" />
 						</Menu.Item>
 						<Menu.Item name="Home" active={activePath == '/'}><Link to="/">Home</Link></Menu.Item>
 						<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
 						<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 						<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
-
+						<Menu.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
 					</Menu.Menu>
 					<Menu.Menu position="right">
 						<Menu.Item>

@@ -1,5 +1,7 @@
 <?php
 use App\Transformers\UsersTransformer;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,22 +17,25 @@ use App\Transformers\UsersTransformer;
 require_once 'api.php';
 
 if (!function_exists('loadHome')) {
+
 	function loadHome() {
-		$me = Auth::user();
+		$me = app('auth')->user();
 
 		if (!is_null($me)) {
 			$transformer = new UsersTransformer();
 			$token = $me->api_token;
 			$me = json_encode(array_merge($transformer->transform($me), compact('token')), JSON_NUMERIC_CHECK);
-		} else {
-			$me = 'null';
 		}
 
 		return view('home')->with('me', $me);
 	}
 }
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
+	if ($request->input('code') === 'yovoy') {
+		return redirect('/asistencia');
+	}
+
 	return loadHome();
 });
 
@@ -46,6 +51,16 @@ Route::get('/logout', function() {
 	auth()->logout();
 
 	return Redirect::back();
+});
+
+Route::get('/export', function() {
+	if (!is_owner('web')) {
+		App::abort(403);
+	}
+
+	$Export = new App\Services\ExportService();
+
+	return response($Export->output())->header('Content-Type', 'text/csv');
 });
 
 Route::get('/{page}', function () {
