@@ -24,15 +24,17 @@ export default class Faq extends React.Component {
 					<Grid.Row>
 						<Grid.Column width={8}>
 							<Segment className="details-segment" vertical>
-								<Map width="100%" />
+								<Header as="h2" content="¿Dónde nos vemos?"/>
+								<p>La Ceremonia Civil tendrá lugar en el Complejo "La Tortuga Azul" de Linares, a las 13:30 horas el día 17 de junio de 2017.</p>
+								<Map />
 							</Segment>
-							<Segment className="another-details-segment" vertical>
+							{/*<Segment className="another-details-segment" vertical>
 								<Menu tabular>
 					        <Menu.Item name='Peluquería' active={activeItem === 'Peluquería'} onClick={this.handleItemClick} />
 					        <Menu.Item name='Alojamiento' active={activeItem === 'Alojamiento'} onClick={this.handleItemClick} />
 									<Menu.Item name='Transporte' active={activeItem === 'Transporte'} onClick={this.handleItemClick} />
 					      </Menu>
-							</Segment>
+							</Segment>*/}
 						</Grid.Column>
 						<Grid.Column width={8}>
 							<Questions />
