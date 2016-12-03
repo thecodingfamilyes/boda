@@ -121,22 +121,12 @@ export default class QuestionApp extends React.Component {
 		let loader = <Loader active={loaderActive}>Cargando...</Loader>;
 		let content = this.buildContent();
 
-		return <Segment className="questions page" vertical>
+		return <Segment vertical>
+			{loader}
 			<Container>
-				<Grid columns={1}>
-					<Grid.Row>
-						<Grid.Column width={16}>
-							<Segment vertical>
-								{loader}
-								<Container>
-									<Header as="h2" content="Pregúntanos" />
-									<QuestionForm onSend={this.onAdd.bind(this)}/>
-									{content}
-								</Container>
-							</Segment>
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
+				<Header as="h2" content="Pregúntanos" />
+				<QuestionForm onSend={this.onAdd.bind(this)}/>
+				{content}
 			</Container>
 		</Segment>;
 	}

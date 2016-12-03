@@ -213,6 +213,7 @@ $primary_color: #f4645f;
 
 		.page {
 			padding-top: 85px;
+			padding-bottom: 40px;
 
 			&.notfound {
 				.container {
@@ -321,6 +322,14 @@ $primary_color: #f4645f;
 			}
 		}
 	}
+
+	.map-info {
+		h3 {
+			margin-bottom: 3px;
+			color: $primary_color;
+		}
+	}
+
 
 	.footer {
 		margin: 0;
