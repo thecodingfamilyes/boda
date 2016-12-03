@@ -185,7 +185,7 @@ export default class Faq extends React.Component {
 								<Map />
 							</Segment>
 							<Segment className="utils-segment" vertical>
-								<Menu tabular>
+								<Menu tabular size="small">
 					        <Menu.Item content={<span className="item-name">Peluquería</span>} icon="cut" name='peluqueria' active={activeItem === 'peluqueria'} onClick={this.handleItemClick.bind(this)} />
 					        <Menu.Item content={<span className="item-name">Alojamiento</span>} icon="building outline" name='alojamiento' active={activeItem === 'alojamiento'} onClick={this.handleItemClick.bind(this)} />
 									<Menu.Item content={<span className="item-name">Transporte</span>} icon="taxi" name='transporte' active={activeItem === 'transporte'} onClick={this.handleItemClick.bind(this)} />
