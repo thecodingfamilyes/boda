@@ -173,6 +173,16 @@
 
 @media only screen and (max-width: 500px) {
 	#root {
+		.utils-segment {
+			.tabular {
+				.item {
+					.item-name {
+						display: none;
+					}
+				}
+			}
+		}
+
 		.footer {
 			.site-data {
 				.menu {
@@ -213,5 +223,3 @@
 		}
 	}
 }
-
-

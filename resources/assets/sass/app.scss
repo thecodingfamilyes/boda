@@ -321,10 +321,54 @@ $primary_color: #f4645f;
 		}
 	}
 
-	.map-info {
-		h3 {
-			margin-bottom: 3px;
-			color: $primary_color;
+	.details-segment {
+		.map-info {
+			h3 {
+				margin-bottom: 3px;
+				color: $primary_color;
+			}
+		}
+	}
+
+	.utils-segment {
+		margin-top: 20px;
+
+		.legend {
+			border: 1px solid rgba(34, 36, 38, 0.15);
+			display: block;
+	    width: 100%;
+	    text-align: center;
+			padding: 5px;
+		}
+
+		p {
+			.icon {
+				color: $primary_color;
+			}
+		}
+
+		.tabular {
+			margin-bottom: 0;
+		}
+
+		.tabs-content {
+			border: none;
+
+			.list {
+				padding-top: 7px;
+
+				.item {
+					.icon {
+						&:not(.disabled) {
+							color: $primary_color;
+						}
+					}
+					.content {
+						line-height: 20px;
+						padding-left: 10px;
+					}
+				}
+			}
 		}
 	}
 
