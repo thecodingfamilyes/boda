@@ -78,7 +78,7 @@ export default class Asistencia extends React.Component {
 	}
 
 	componentDidUpdate() {
-		console.log(this.state.data);
+
 	}
 
 	onSubmit(e) {
@@ -202,7 +202,7 @@ export default class Asistencia extends React.Component {
 					<Header as="h2" content="Confirmación de asistencia"/>
 					<Grid divided="vertically" reversed="mobile" stackable relaxed>
 						<Grid.Column width={10}>
-							<Dimmer active={saving || sent} inverted>
+							<Dimmer active={!!saving || !!sent} inverted>
 								{dimmerContent}
 					    	</Dimmer>
 							{form}
