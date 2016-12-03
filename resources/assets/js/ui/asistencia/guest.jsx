@@ -32,7 +32,7 @@ export default (props) => {
             required
         />
         <Popup
-            trigger={<Form.Button width={2} negative color="red" size="small" icon="trash" circular onClick={(e) => {
+            trigger={<Form.Button className="delete-btn" width={2} negative color="red" size="small" icon="trash" circular onClick={(e) => {
             	e.preventDefault();
                 props.onDelete(props.index);
             }} disabled={props.index == 0} />}

@@ -1,8 +1,6 @@
 @import "semantic/semantic";
 @import "carousel";
 @import "carousel_main";
-@import "pages/boda";
-@import "pages/signatures";
 
 $primary_color: #f4645f;
 
@@ -411,5 +409,9 @@ $primary_color: #f4645f;
 
 	}
 }
+
+@import "pages/boda";
+@import "pages/signatures";
+@import "pages/asistentes";
 
 @import "responsive";
