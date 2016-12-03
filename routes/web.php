@@ -60,7 +60,7 @@ Route::get('/export', function() {
 
 	$Export = new App\Services\ExportService();
 
-	return $Export->output();
+	return response($Export->output())->header('Content-Type', 'text/csv');
 });
 
 Route::get('/{page}', function () {
