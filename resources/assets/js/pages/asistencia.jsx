@@ -140,18 +140,10 @@ export default class Asistencia extends React.Component {
 					{
 						text: 'Otros',
 						value: 'otros'
-					},
-					{
-						text: 'Domi (En serio, amigo y mi fotógrafo personal)',
-						value: 'domi'
 					}
 				]} onChange={(proxy, data) => {
 					this.onFieldChange('relationship', data.value);
 				}}  error={errorField =='relationship'}/>
-				{data.relationship == 'domi' ? <Message negative>
-					<Message.Header>Se necesita un discurso</Message.Header>
-					<p>Es necesario presentar un discurso para poder completar el formulario. Por favor, vuelve cuando lo termines.</p>
-				</Message> : null}
 			</Form.Field>
 
 			<Form.Field>
