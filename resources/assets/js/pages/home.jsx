@@ -1,15 +1,16 @@
 import React from 'react';
-import {Segment, Container, Grid, Header, Card, Image} from 'semantic-ui-react';
+import {Segment, Container, Grid, Header, Card, Image, Button} from 'semantic-ui-react';
 import { Link } from 'react-router';
 import Countdown from '../ui/countdown.jsx';
 import SliderHome from '../ui/sliderhome.jsx';
-
+//
 export default class Home extends React.Component {
 	render() {
 		return <div className="ui page home">
 			<Segment vertical className="countdown-wrapper">
-				<Countdown />
+				<Countdown />				
 			</Segment>
+
 			<Segment vertical className="presentation">
 				<Container>
 					<Grid>

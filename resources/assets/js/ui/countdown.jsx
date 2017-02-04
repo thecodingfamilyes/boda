@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import {Container, Segment} from 'semantic-ui-react';
+import {Container, Segment, Button, Grid, Icon} from 'semantic-ui-react';
 import {Circle} from 'react-progressbar.js';
 
 moment.locale('es');
@@ -86,6 +86,22 @@ export default class Countdown extends React.Component {
 	}
 
 	render() {
-		return <Segment className="wedding-countdown borderless">{this.state.cdprogress}</Segment>;
+		const content = <Container className="paddingless">
+			<Grid>
+				<Grid.Row>
+					<Grid.Column width={8}>
+						{this.state.cdprogress}
+					</Grid.Column>
+					<Grid.Column width={4} />
+					<Grid.Column width={4}>
+						<Button basic inverted fluid icon='gift' size='huge' onClick={() =>{
+							window.location.href = 'https://www.coinc.es/coinc/social/shared/goal.xhtml?id=6F7eUsNGa8RtHoxR1sKW9w';
+						}} content='¡Haz un regalo!' className="gift-button"/>
+					</Grid.Column>
+				</Grid.Row>
+			</Grid>
+		</Container>;
+
+		return <Segment className="wedding-countdown borderless">{content}</Segment>;
 	}
 };

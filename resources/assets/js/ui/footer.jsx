@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Segment, Menu, Header, Icon, Image, Grid} from 'semantic-ui-react';
+import {Container, Segment, Menu, Header, Icon, Image, Grid, Button} from 'semantic-ui-react';
 import HeaderMenu from './headermenu.jsx';
 import { Link } from 'react-router';
 import PerlitaSignature from '../ui/signature.jsx';
@@ -17,6 +17,11 @@ export default class Footer extends React.Component {
 							<Menu.Item name="Libro de firmas"> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 							<Menu.Item name="Pregúntanos"> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
 							<Menu.Item name="Asistencia"> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
+							<Menu.Item>
+								<a className="gift-link" href='https://www.coinc.es/coinc/social/shared/goal.xhtml?id=6F7eUsNGa8RtHoxR1sKW9w' target='_blank'>
+									<Icon name="gift" /> Hacer regalo
+								</a>
+							</Menu.Item>
 						</Menu.Menu>
 					</Menu>
 					<Grid>

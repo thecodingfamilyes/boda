@@ -20,6 +20,14 @@ $primary_color: #f4645f;
 #root {
 	.container {
 		padding-bottom: 20px;
+
+		&.paddingless {
+			padding-bottom: 0;
+		}
+	}
+
+	.gift-button {
+		margin-top: 25px;
 	}
 
 	.main-menu {
@@ -264,7 +272,7 @@ $primary_color: #f4645f;
 
 				.countdown-text {
 					padding-left: 15px;
-					vertical-align: sub;
+					vertical-align: -10px;
 
 					.counter-box {
 						text-align: center;
