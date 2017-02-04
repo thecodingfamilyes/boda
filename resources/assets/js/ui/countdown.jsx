@@ -87,7 +87,7 @@ export default class Countdown extends React.Component {
 
 	render() {
 		const content = <Container className="paddingless">
-			<Grid>
+			<Grid stackable>
 				<Grid.Row>
 					<Grid.Column width={8}>
 						{this.state.cdprogress}
