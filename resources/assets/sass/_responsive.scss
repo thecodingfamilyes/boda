@@ -24,6 +24,12 @@
 
 	.wedding-countdown .ui.stackable.grid .row {
 		border: none;
+		margin-left: 0;
+
+		>.spacer {
+			display: none;
+			padding: 0;
+		}
 	}
 
 	.ui.grid > .row > [class*="eight wide"].column {

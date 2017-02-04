@@ -92,7 +92,7 @@ export default class Countdown extends React.Component {
 					<Grid.Column width={8}>
 						{this.state.cdprogress}
 					</Grid.Column>
-					<Grid.Column width={4} />
+					<Grid.Column width={4} className='spacer' />
 					<Grid.Column width={4}>
 						<Button basic inverted fluid icon='gift' size='huge' onClick={() =>{
 							window.location.href = 'https://www.coinc.es/coinc/social/shared/goal.xhtml?id=6F7eUsNGa8RtHoxR1sKW9w';
