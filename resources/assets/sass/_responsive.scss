@@ -22,6 +22,10 @@
 		border-left: 2px solid #FF9D9A;
 	}
 
+	.wedding-countdown .ui.stackable.grid .row {
+		border: none;
+	}
+
 	.ui.grid > .row > [class*="eight wide"].column {
 		width: 100% !important;
 	}
