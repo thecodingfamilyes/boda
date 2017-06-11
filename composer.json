@@ -10,7 +10,9 @@
         "barryvdh/laravel-debugbar": "^2.2",
         "league/fractal": "^0.14.0",
         "laravel/socialite": "^2.0",
-        "league/csv": "^8.1"
+        "league/csv": "^8.1",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -44,8 +44,10 @@ Route::get('/callback', 'SocialAuthController@callback');
 
 Route::get('/google/redirect', 'GoogleSocialAuthController@redirect');
 Route::get('/google/callback', 'GoogleSocialAuthController@callback');
-
 Auth::routes();
+
+Route::get('/photo/{directory}/{size}/{filename}', 'PhotosController@show');
+Route::get('/photo/{directory}/{filename}', 'PhotosController@original');
 
 Route::get('/logout', function() {
 	auth()->logout();
