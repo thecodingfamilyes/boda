@@ -27424,6 +27424,14 @@ h5 {
   margin-top: 26px !important;
 }
 
+.fotos.page .boda-photos {
+  min-height: 500px;
+}
+
+.fotos.page .boda-photos .image-element-class {
+  margin-bottom: 1em;
+}
+
 /* La Boda */
 @media (min-width: 676px) and (max-width: 991px) {
   .wedding .timeline-grid .row .column.with-image img {

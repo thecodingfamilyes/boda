@@ -56,7 +56,7 @@ export default class HeaderMenu extends React.Component {
 			'/boda': 'La Boda',
 			'/firmas': 'Libro de firmas',
 			'/faq': 'Pregúntanos',
-			'/asistentes': 'Asistentes'
+			'/fotos': 'Fotos',
 		};
 
 		if (device.mobile()) {
@@ -72,7 +72,7 @@ export default class HeaderMenu extends React.Component {
 								<Dropdown.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Dropdown.Item>
 								<Dropdown.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Dropdown.Item>
 								<Dropdown.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Dropdown.Item>
-								<Dropdown.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Dropdown.Item>
+								<Dropdown.Item name="Fotos" active={activePath == '/fotos'}> <Link to="/fotos">Fotos</Link> </Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
 					</Menu.Item>
@@ -95,7 +95,7 @@ export default class HeaderMenu extends React.Component {
 							<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
 							<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 							<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
-							<Menu.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
+							<Menu.Item name="Fotos" active={activePath == '/fotos'}> <Link to="/fotos">Fotos</Link> </Menu.Item>
 						</Menu.Menu>
 						<Menu.Menu position="right">
 							<Menu.Item>
@@ -116,7 +116,7 @@ export default class HeaderMenu extends React.Component {
 						<Menu.Item name="La boda" active={activePath == '/boda'}><Link to="/boda">La Boda</Link></Menu.Item>
 						<Menu.Item name="Libro de firmas" active={activePath == '/firmas'}> <Link to="/firmas">Libro de firmas</Link> </Menu.Item>
 						<Menu.Item name="Pregúntanos" active={activePath == '/faq'}> <Link to="/faq">Pregúntanos</Link> </Menu.Item>
-						<Menu.Item name="Asistencia" active={activePath == '/asistencia'}> <Link to="/asistencia">Asistencia</Link> </Menu.Item>
+						<Menu.Item name="Fotos" active={activePath == '/fotos'}> <Link to="/fotos">Fotos</Link> </Menu.Item>
 					</Menu.Menu>
 					<Menu.Menu position="right">
 						<Menu.Item>

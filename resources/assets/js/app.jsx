@@ -11,4 +11,5 @@ ReactDOM.render(<Router history={browserHistory}>
 	<Route path="/firmas" component={Layout} />
 	<Route path="/faq" component={Layout} />
 	<Route path="/asistencia" component={Layout} />
+	<Route path="/fotos" component={Layout} />
 </Router>, element);

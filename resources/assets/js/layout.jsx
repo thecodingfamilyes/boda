@@ -4,6 +4,7 @@ import Home from './pages/home.jsx';
 import Boda from './pages/boda.jsx';
 import Firmas from './pages/firmas.jsx';
 import Faq from './pages/faq.jsx';
+import Fotos from './pages/fotos.jsx';
 import Asistencia from './pages/asistencia.jsx';
 import NotFound from './pages/notfound.jsx';
 import {Segment} from 'semantic-ui-react';
@@ -17,7 +18,8 @@ export default class Layout extends React.Component {
 			'/boda': Boda,
 			'/firmas': Firmas,
 			'/faq': Faq,
-			'/asistencia': Asistencia
+			'/asistencia': Asistencia,
+			'/fotos': Fotos
 		};
 
 		let Page = paths[path] || NotFound;
