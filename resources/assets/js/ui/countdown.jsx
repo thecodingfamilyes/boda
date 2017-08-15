@@ -38,6 +38,10 @@ function getDuration() {
 			containerClassName={'progressbar-container inline'}
 		/>*/}
 		<div className="countdown-text inline">
+			<div className="counter-info">
+				Mis papis se han casado hace:
+			</div>
+
 			<div className="months counter-box inline">
 				<p className="count">{duration.months()}</p>
 				<p className="label">Meses</p>
@@ -89,15 +93,15 @@ export default class Countdown extends React.Component {
 		const content = <Container className="paddingless">
 			<Grid stackable>
 				<Grid.Row>
-					<Grid.Column width={8}>
+					<Grid.Column width={16}>
 						{this.state.cdprogress}
 					</Grid.Column>
-					<Grid.Column width={4} className='spacer' />
+					{/*<Grid.Column width={4} className='spacer' />
 					<Grid.Column width={4}>
 						<Button basic inverted fluid icon='gift' size='huge' onClick={() =>{
 							window.location.href = 'https://www.coinc.es/coinc/social/shared/goal.xhtml?id=6F7eUsNGa8RtHoxR1sKW9w';
 						}} content='¡Haz un regalo!' className="gift-button"/>
-					</Grid.Column>
+					</Grid.Column>*/}
 				</Grid.Row>
 			</Grid>
 		</Container>;

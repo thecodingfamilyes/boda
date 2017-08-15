@@ -274,6 +274,13 @@ $primary_color: #f4645f;
 					padding-left: 15px;
 					vertical-align: -10px;
 
+					.counter-info {
+						color: #FFB4B2;
+						text-transform: uppercase;
+						margin-bottom: 10px;
+						font-weight: bold;
+					}
+
 					.counter-box {
 						text-align: center;
 						color: #FFB4B2;
