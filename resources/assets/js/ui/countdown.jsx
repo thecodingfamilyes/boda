@@ -13,14 +13,14 @@ const weddingDateTimestamp = weddingDate.toDate().getTime();
 
 function getDuration() {
 	let diff = weddingDate.diff(moment());
-	let duration = moment.duration(diff);
+	let duration = moment.duration(diff * (-1));
 	let text = duration.months() + ' meses ' + duration.days() + ' días ' + duration.hours() + ' horas ' + duration.minutes() + ' minutos ' + duration.seconds() + ' segundos' ;
 
 	let currentTimestamp = moment().toDate().getTime();
 
 	let fullbar = weddingDateTimestamp - startDateTimestamp;
-	let progress = currentTimestamp - startDateTimestamp;
-	let percent = (progress * 100) / fullbar;
+	// let progress = currentTimestamp - startDateTimestamp;
+	// let percent = (progress * 100) / fullbar;
 
 	var options = {
 		strokeWidth: 6,
@@ -30,13 +30,13 @@ function getDuration() {
 	};
 
 	return <div>
-		<Circle
+		{/*<Circle
 			progress={percent / 100}
 			text={percent.toFixed(2) + '%'}
 			options={options}
 			initialAnimate={true}
 			containerClassName={'progressbar-container inline'}
-		/>
+		/>*/}
 		<div className="countdown-text inline">
 			<div className="months counter-box inline">
 				<p className="count">{duration.months()}</p>
